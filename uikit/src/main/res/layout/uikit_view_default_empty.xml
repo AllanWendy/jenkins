@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/uikit_empty_network_group"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/uikit_empty_network_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/uikit_pic_empty_network" />
+
+        <TextView
+            style="@style/UIKit.Font.Big"
+            android:id="@+id/uikit_empty_network_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center" />
+
+        <TextView
+            style="@style/UIKit.Font"
+            android:id="@+id/uikit_empty_network_second_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <TextView
+            style="@style/UIKit.Font.Orange"
+            android:id="@+id/uikit_empty_network_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="@drawable/uikit_bt_bg_click"
+            android:layout_marginTop="10dp"
+            android:text="重新加载" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/uikit_empty_image_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        style="@style/UIKit.Font.Big"
+        android:id="@+id/uikit_empty_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        style="@style/UIKit.Font"
+        android:id="@+id/uikit_empty_second_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/uikit_empty_image_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        style="@style/UIKit.Font.Orange"
+        android:id="@+id/uikit_empty_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/uikit_bt_bg_click"
+        android:visibility="gone" />
+
+</LinearLayout>

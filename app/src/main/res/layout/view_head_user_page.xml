@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_pic_bg_user_page">
+
+    <com.wecook.uikit.widget.shape.HaloCircleImageView
+        style="@style/AppTheme.CircleImageView"
+        app:inColor="@color/uikit_font_white"
+        app:outColor="@color/uikit_font_white"
+        app:midStrokeWidth="2dp"
+        android:id="@+id/app_user_page_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/app_user_page_name"
+        style="@style/UIKit.Font.Big.Dark"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/app_user_page_location"
+        style="@style/UIKit.Font"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/app_ic_girl"
+        android:layout_marginTop="4dp"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/app_user_page_cook_show"
+            style="@style/UIKit.Font.Big.Dark"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="20dp"
+            android:gravity="center"
+            android:textColor="@color/app_tab_user_page"
+            android:text="0 厨艺" />
+
+        <View
+            style="@style/UIKit.Line.Vertical"
+            android:background="@color/uikit_grey_dark"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/app_user_page_recipe"
+            style="@style/UIKit.Font.Big.Dark"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/app_tab_user_page"
+            android:text="0 菜谱" />
+
+    </LinearLayout>
+
+    <com.wecook.uikit.widget.indicator.UnderlinePageIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/app_user_page_tab_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:selectedColor="@color/uikit_orange" />
+
+    <View style="@style/UIKit.Line.Horizontal" />
+
+    <com.wecook.uikit.widget.viewpage.HeightWrappingViewPager
+        android:id="@+id/app_user_page_view_page"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</LinearLayout>

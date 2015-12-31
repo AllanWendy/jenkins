@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/UIKit.Font.Big.Dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="18dp"
+        android:background="@color/uikit_white"
+        android:text="@string/app_dialog_card_title"/>
+
+    <View style="@style/UIKit.Line.Horizontal" />
+
+    <LinearLayout
+        android:id="@+id/app_card_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/uikit_white"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.wecook.app.main.dish.DishCategoryView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/uikit_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/app_view_category"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <!--<View style="@style/UIKit.Line.Vertical" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/app_view_order_choose"-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scaleType="centerInside"-->
+        <!--android:soundEffectsEnabled="false"-->
+        <!--android:src="@drawable/app_bt_order_show" />-->
+    </LinearLayout>
+
+    <View style="@style/UIKit.Line.Horizontal"/>
+
+    <include
+        android:id="@+id/app_view_order"
+        layout="@layout/view_order_by_chooser"/>
+
+    <View style="@style/UIKit.Line.Horizontal"/>
+
+</cn.wecook.app.main.dish.DishCategoryView>

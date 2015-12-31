@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/app_comment_reply_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/app_comment_reply_name"
+        style="@style/UIKit.Font.Dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="客服回复："
+        android:textColor="@color/uikit_orange" />
+
+    <TextView
+        android:id="@+id/app_comment_reply_content"
+        style="@style/UIKit.Font.Dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:text="感谢您的赞赏，我们会继续努力，同时我们会在第一时间处理您的反馈并及时回复" />
+</LinearLayout>

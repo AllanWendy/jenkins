@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:showIn="@layout/view_order_check_restaurant_list_item">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/app_order_check_dish_image"
+            style="@style/UIKit.ImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:id="@+id/app_order_check_dish_count"
+            style="@style/UIKit.Font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_order_check_dish_image"
+            android:layout_toRightOf="@id/app_order_check_dish_image"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="x2" />
+
+        <TextView
+            android:id="@+id/app_order_check_dish_name"
+            style="@style/UIKit.Font.Big.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/app_order_check_dish_image"
+            android:paddingLeft="10dp"
+            android:text="干锅茶树菇" />
+
+        <TextView
+            android:id="@+id/app_order_check_dish_price"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_order_check_dish_image"
+            android:layout_alignParentRight="true"
+            android:text="32.00" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+</LinearLayout>

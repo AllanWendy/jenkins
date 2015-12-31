@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+                    NAME_RULES
+                group _ [ui] _ name
+                ui:
+                    main
+                    kitchen
+                    home
+                    activity
+                    fragment
+                    view
+                    actionbar
+                    navigation
+                    ...
+    -->
+
+    <string name="app_name">味库</string>
+
+    <string name="app_navigation_main">首页</string>
+    <string name="app_navigation_kitchen">厨房</string>
+    <string name="app_navigation_my">我</string>
+    <string name="app_exit_toast">再按一次退出味库</string>
+    <string name="app_my_click_to_login">点击登录</string>
+    <string name="app_setting_about_sina">新浪微博@味库</string>
+    <string name="app_setting_about_weixin">微信公众号：味库</string>
+    <string name="app_slogan">会做菜 更懂爱</string>
+    <string name="app_food_load_more">更多菜谱</string>
+    <string name="app_food_action_do">上传菜谱</string>
+
+    <string name="app_recommend_default_tag_staple">主食</string>
+    <string name="app_recommend_default_tag_western">西餐</string>
+    <string name="app_recommend_default_tag_children">儿童</string>
+    <string name="app_recommend_default_tag_rightnow">当季</string>
+    <string name="app_recommend_default_tag_more">更多</string>
+    <string name="app_recommend_feature_dish">去买菜</string>
+    <string name="app_recommend_feature_garnish">下厨房</string>
+    <string name="app_recommend_feature_cookshow">晒厨艺</string>
+    <string name="app_recommend_feature_publish">传菜谱</string>
+
+    <string name="app_label_write_comment">写评论</string>
+    <string name="app_label_upload_food">晒厨艺</string>
+
+    <string name="app_home_item_message">我的消息</string>
+
+    <string name="app_home_item_fav">我的收藏</string>
+    <string name="app_home_item_upload">我的厨艺</string>
+    <string name="app_home_item_recipe">我的菜谱</string>
+    <string name="app_home_item_coupon">我的优惠码</string>
+    <string name="app_home_item_order">全部订单</string>
+    <string name="app_home_item_call">客服电话</string>
+    <string name="app_home_item_wallet">我的钱包</string>
+    <string name="app_home_item_gain_coupon">获得优惠</string>
+
+    <string name="app_home_item_recipe_draft">草稿箱</string>
+
+    <string name="app_home_item_order_obligation">待付款</string>
+    <string name="app_home_item_order_no_deliver">待收货</string>
+    <string name="app_home_item_order_no_evaluate">待评价</string>
+    <string name="app_home_item_order_refund">退款</string>
+
+    <string name="app_kitchen_home_item_ingredient">食材</string>
+    <string name="app_kitchen_home_item_condiment">调料</string>
+    <string name="app_kitchen_home_item_wave">厨具</string>
+    <string name="app_kitchen_home_item_barcode">扫码</string>
+
+    <string name="app_account_bind_item_weixin">绑定微信</string>
+    <string name="app_account_bind_item_qq">绑定QQ</string>
+    <string name="app_account_bind_item_weibo">绑定新浪微博</string>
+    <string name="app_account_bind_login_success">登录成功！手机已绑定</string>
+
+    <string name="app_setting_item_update_pwd">修改手机登录密码</string>
+    <string name="app_setting_item_binded_phone">已绑定手机号 %1$3s</string>
+    <string name="app_setting_item_unbind_phone">未绑定手机账号</string>
+    <string name="app_setting_item_bind_phone">账号绑定</string>
+    <string name="app_setting_item_share_app">把味库分享给小伙伴</string>
+    <string name="app_setting_item_feedback">帮助和建议</string>
+    <string name="app_setting_item_yummy">给味库君点个赞</string>
+    <string name="app_setting_item_clear_cache">清除缓存</string>
+    <string name="app_setting_item_push">推送消息</string>
+    <string name="app_setting_item_about">关于味库</string>
+    <string name="app_setting_item_address">常用地址</string>
+    <string name="app_setting_item_check_upd">检查更新</string>
+    <string name="app_setting_item_provisions">法律条款</string>
+    <string name="app_setting_item_login_state">正在使用%1$s登录</string>
+    <string name="app_setting_item_binded_phone_sub">更换</string>
+
+    <string name="app_home_coupon_rule">*优惠码使用细则</string>
+
+    <string name="app_title_my_setting">设置</string>
+    <string name="app_title_my_coupon">分享优惠</string>
+    <string name="app_title_my_favorite">我的收藏</string>
+    <string name="app_title_cook_show">晒过的厨艺</string>
+    <string name="app_title_cook_show_food">晒厨艺 — %1$s</string>
+    <string name="app_title_cook_show_list">晒厨艺</string>
+    <string name="app_about">关于我们</string>
+    <string name="app_title_about">关于味库</string>
+    <string name="app_about_trading">交易条款</string>
+    <string name="app_about_protocol">隐私条款</string>
+    <string name="app_about_server">服务使用协议</string>
+    <string name="app_collecting_server">代收协议</string>
+    <string name="app_favorite_tag_article">文章</string>
+    <string name="app_favorite_tag_activity">活动</string>
+    <string name="app_favorite_tag_food">菜谱</string>
+    <string name="app_want_join_party">%s人想参加</string>
+    <string name="app_title_topic">吃货新鲜事</string>
+    <string name="app_title_party">吃货去哪儿</string>
+    <string name="app_label_like">我感兴趣</string>
+    <string name="app_comment_send">发送</string>
+    <string name="app_comment_hint">发表评论…</string>
+    <string name="app_comment_hint_input">说两句呗（120字以内）</string>
+    <string name="app_search_hint">搜索菜谱</string>
+    <string name="app_category_index_name"> %1$s </string>
+    <string name="app_button_register">注册</string>
+
+    <string name="app_bind">绑定</string>
+    <string name="app_bind_phone">绑定手机号</string>
+    <string name="app_bind_new_phone">绑定新手机</string>
+    <string name="app_bind_account">账号绑定</string>
+    <string name="app_bind_tip">绑定手机后，账号更安全！</string>
+    <string name="app_bind_new_phone_hint_num">输入要绑定的手机号</string>
+    <string name="app_bind_new_phone_hint_code">收到的验证码</string>
+
+    <string name="app_login_title"> 登录 </string>
+    <string name="app_login_last_state_label">上次使用</string>
+    <string name="app_login_last_state">%1$s账号登录</string>
+    <string name="app_login_register">注册新账号</string>
+    <string name="app_login_phone_rapid">手机快捷登录</string>
+    <string name="app_button_rapidregister">注册</string>
+    <string name="app_rapid_title">快速登录</string>
+    <string name="app_login_account_name_hint">手机号/邮箱</string>
+    <string name="app_rapidlogin_account_name_hint">正在使用的手机号</string>
+    <string name="app_rapid_login_account_name_hint">手机号</string>
+    <string name="app_rapid_login_auth_code">验证码</string>
+    <string name="app_verify_phone">验证</string>
+    <string name="app_login_account_pwd_hint">密码</string>
+    <string name="app_rapidlogin_account_codehint">收到的验证码</string>
+    <string name="app_rapidlogin_obtain_code">获取验证码</string>
+    <string name="app_login_third_div">第三方登录</string>
+    <string name="app_rapidlogin_otherway">其他登录方式</string>
+    <string name="app_login_third_weibo">微博</string>
+    <string name="app_login_third_email">邮箱</string>
+    <string name="app_login_third_phone">手机</string>
+    <string name="app_login_third_phone_rapid">手机快捷</string>
+    <string name="app_login_third_qq">QQ</string>
+    <string name="app_login_third_wexin">微信</string>
+    <string name="app_login_turnto_rapidlogin">其他登录方式</string>
+    <string name="app_login_account_verity_hint">验证码</string>
+    <string name="app_register_account_name_hint_email">请填写您的邮箱</string>
+    <string name="app_register_account_password_hint">密码（6位以上数字或字母）</string>
+    <string name="app_register_account_nickname_hint">昵称</string>
+    <string name="app_register_account_password_tip">6–10位英文或数字</string>
+    <string name="app_register_tab_phone">手机注册</string>
+    <string name="app_register_tab_email">邮箱</string>
+    <string name="app_button_title_register_and_login">注册并登录</string>
+    <string name="app_button_title_login">登录</string>
+    <string name="app_button_title_next">下一步</string>
+    <string name="app_button_title_finish">完成</string>
+    <string name="app_button_title_waiting">等待结果</string>
+    <string name="app_register_account_name_hint_phone">手机号</string>
+    <string name="app_register_account_verity_hint">验证码</string>
+    <string name="app_register_server">注册即视为您已同意</string>
+    <string name="app_register_phone_get_verity">获取验证码</string>
+    <string name="app_my_waiting_verity_time">%1$s秒后重新获取</string>
+
+    <string name="app_verify_phone_title1">安全验证</string>
+    <string name="app_verify_phone_title_next">》</string>
+    <string name="app_verify_phone_title2">绑定新手机</string>
+    <string name="app_verify_phone_bottom_tip">收不到验证码？手机号验证》</string>
+    <string name="app_verify_phone_top_tip">手机号验证</string>
+    <string name="app_verify_phone_hint_code">收到的验证码</string>
+    <string name="app_verify_phone_hint_num">请输入您绑定的手机号</string>
+
+    <string name="app_error_phone_format">手机号格式错误</string>
+    <string name="app_error_account_format">账号格式错误</string>
+    <string name="app_error_verify_phone">您输入的手机号有误,还有%1$s次机会</string>
+    <string name="app_error_verify_phone_max_count">已连续5次输入错误，请次日再试</string>
+    <string name="app_error_phone_null">手机号不能为空</string>
+    <string name="app_error_pswd_null">密码不能为空</string>
+    <string name="app_error_verity_null">验证码不能为空</string>
+    <string name="app_error_account_name_format">用户名为手机号</string>
+    <string name="app_error_pwd_format">密码为6位以上数字或字母</string>
+    <string name="app_error_pwd_verify">两次密码输入不一致</string>
+    <string name="app_error_email_format">邮箱格式有误</string>
+    <string name="app_error_bind">绑定失败</string>
+    <string name="app_error_unbind">解绑失败</string>
+    <string name="app_error_net">网络错误</string>
+
+    <string name="app_title_register">注册</string>
+
+    <string name="app_mcbs_hot_set_meal">热门套餐</string>
+
+    <string name="app_tip_register_success">注册成功</string>
+    <string name="app_tip_login_success">登录成功</string>
+    <string name="app_title_find_password">找回密码</string>
+    <string name="app_forget_label_input_account">账号</string>
+    <string name="app_forget_hint_input_account">请输入您注册的邮箱或手机号</string>
+    <string name="app_forget_label_check_verity_code">验证码</string>
+    <string name="app_forget_tip">已发送至%1$s</string>
+    <string name="app_forget_hint_check_verity_code">验证码</string>
+    <string name="app_forget_label_new_pwd">重置密码</string>
+    <string name="app_error_no_reason">未知错误</string>
+    <string name="app_error_network">当前网络不可用</string>
+    <string name="app_tip_reset_success">密码重置成功</string>
+    <string name="app_title_bar_edit">编辑</string>
+    <string name="app_title_bar_save">保存</string>
+    <string name="app_title_user_profile">账户信息</string>
+    <string name="app_user_profile_label_nickname">昵称</string>
+    <string name="app_user_profile_label_birthday">生日</string>
+    <string name="app_user_profile_label_gender">性别</string>
+    <string name="app_user_profile_label_city">城市</string>
+    <string name="app_button_logout">退出当前登录</string>
+    <string name="app_gender_girl">女</string>
+    <string name="app_gender_boy">男</string>
+    <string name="app_tip_update_success">信息更新成功</string>
+    <string name="app_tip_copy_success">复制\"%1$s\"成功</string>
+    <string name="app_context_menu_title_more">更多操作</string>
+    <string name="app_context_menu_title_delete">删除操作</string>
+    <string name="app_context_menu_remove">删除</string>
+    <string name="app_context_menu_edit">编辑</string>
+    <string name="app_context_menu_review">预览</string>
+    <string name="app_title_input_comment">写评论</string>
+    <string name="app_title_replay_comment">回复评论</string>
+    <string name="app_error_comment_empty">评论内容不能为空</string>
+    <string name="app_error_comment_too_long">评论内容只能120个字</string>
+    <string name="app_tip_comment_success">评论成功</string>
+    <string name="app_error_comment_sending">评论正在发送中…</string>
+    <string name="app_title_category">分类</string>
+    <string name="app_button_search">搜索</string>
+    <string name="app_label_history_search">历史搜索</string>
+    <string name="app_label_hot_search">热门搜索</string>
+    <string name="app_tip_clear_cache_ing">清理缓存中</string>
+    <string name="app_tip_clear_cache_finish">清理完成</string>
+    <string name="app_share_app_content">我用完这个软件后，觉得超赞，你也快去下载试试：http://www.wecook.cn</string>
+    <string name="app_kitchen_tip">选择想吃的食材\n味小库帮你生成菜谱</string>
+    <string name="app_kitchen_garnish">开始选菜</string>
+    <string name="app_title_kitchen">厨房</string>
+    <string name="app_button_title_myfoods">我的食材</string>
+    <string name="app_platform_wechat">微信</string>
+    <string name="app_platform_wechat_friends">朋友圈</string>
+    <string name="app_platform_weblog">微博</string>
+    <string name="app_button_title_cancel">取消</string>
+    <string name="app_share_food_template">这道\"%1$s\" 真真是极好的！快来get此项技能！</string>
+    <string name="app_share_party_template">我在@味库 发现了这个活动，这下有事情做啦~筒子们走起？</string>
+    <string name="app_share_topic_template">看的我也是醉了~我才不会告诉你这样妙的文章@味库 还有一箩筐呢！</string>
+    <string name="app_share_resource_template">%1$s原来是这样挑选的啊！涨姿势了～以后带着@味库去买菜</string>
+    <string name="app_share_resource_template_ware">看了@味库才知道，原来%1$s还能做这么多菜！马上跟着学起来！</string>
+    <string name="app_button_title_back">返回</string>
+    <string name="app_button_title_publish">发布</string>
+    <string name="app_button_title_republish">重新发布</string>
+    <string name="app_title_preview">预览</string>
+    <string name="app_button_title_repick">重选</string>
+    <string name="app_button_title_retake">重拍</string>
+    <string name="app_share_cook_show_self">刚做好的\"%1$s\" 快来@味库，给我打分！</string>
+    <string name="app_share_cook_show">这道\"%1$s\"真心赞, 快来@味库，给TA打分！</string>
+    <string name="app_cook_show_publish_success">发布成功！\n您也可以把您的厨艺分享给朋友们。</string>
+    <string name="app_recipe_publish_success">发布成功！\n同时分享到以下平台</string>
+    <string name="app_feedback_hint">写下您的意见，会有人回复哦～</string>
+    <string name="app_button_title_submit">提交</string>
+    <string name="app_title_cat">更多</string>
+    <string name="app_title_feedback">意见反馈</string>
+    <string name="app_title_garnish_food">选菜</string>
+    <string name="app_title_garnish_food_recipe">可做%1$s道菜</string>
+    <string name="app_kitchen_garnish_recipe_label">可做菜品</string>
+    <string name="app_tip_kitchen_garnish_empty">先选一个最想吃的食材！</string>
+    <string name="app_title_garnish_recipe_list">厨房能做的菜</string>
+    <string name="app_title_kitchen_home">我的食材</string>
+    <string name="app_button_title_clear">清理</string>
+    <string name="app_kitchen_home_item_add_barcode_title">扫码添加</string>
+    <string name="app_kitchen_home_item_add_condiment_title">添加调料</string>
+    <string name="app_kitchen_home_item_add_ingredient_title">添加食材</string>
+    <string name="app_kitchen_home_item_add_kitchenware_title">添加厨具</string>
+    <string name="app_search_resource_hint">直接输入想要的食材</string>
+    <string name="app_title_kitchen_add">添加/删除</string>
+    <string name="app_kitchen_detail_added">已添加到厨房</string>
+    <string name="app_kitchen_detail_add_to">添加到厨房</string>
+    <string name="app_button_title_garnish">查看厨房食材能做的菜</string>
+    <string name="app_tip_bar_code_fail">该条码暂无资源匹配</string>
+    <string name="app_tip_sync_resource_success_both">同步厨房成功！共增加%1$s个，删除%2$s个</string>
+    <string name="app_tip_sync_resource_success_add">同步厨房成功！共增加%1$s个。</string>
+    <string name="app_tip_sync_resource_success_remove">同步厨房成功！共删除%1$s个。</string>
+    <string name="app_tip_bar_code_scan">将条码放入框内即可识别\n(例如：食材、厨电、调味品包装或标签上的条码)</string>
+    <string name="app_tip_bar_code_scan_text"> 请将二维码放置在方框内\n注意调整二维码和手机之间的距离</string>
+    <string name="app_tip_bar_code_scan_title">扫描校准辅助区域</string>
+    <string name="app_empty_title_barcode">无商品信息</string>
+    <string name="app_empty_title_draft">草稿箱是空的</string>
+    <string name="app_empty_second_title_barcode">味小库还不认识，还在努力学习中</string>
+    <string name="app_empty_title_comment">还没有评论</string>
+    <string name="app_empty_second_title_comment">\"未开垦的处女地，还不快踩\"</string>
+    <string name="app_empty_second_title_cookshow">表羞涩，好厨艺要一起分享嘛~</string>
+    <string name="app_empty_title_cookshow">还没有晒过大作</string>
+    <string name="app_empty_title_fav">还没有收藏内容</string>
+    <string name="app_empty_second_title_fav">喜欢的那么多，不收藏怎么行！</string>
+    <string name="app_empty_title_search">这个菜暂未收录</string>
+    <string name="app_empty_title_message">消息列表是空的</string>
+    <string name="app_empty_second_title_search">不妨先看看其他内容</string>
+    <string name="app_empty_second_title_my_recipe">快把你的美味教程分享出来吧</string>
+    <string name="app_kitchen_search_tip1">推荐的食材</string>
+    <string name="app_kitchen_search_tip2">找到的食材</string>
+    <string name="app_kitchen_search_tip3">推荐搭配的食材</string>
+    <string name="app_kitchen_search_tip4">找到搭配的食材</string>
+
+    <string name="app_setting_change_pwd_oldpwd">旧密码</string>
+    <string name="app_setting_change_pwd_newpw">新密码（6位以上数字或字母）</string>
+    <string name="app_setting_change_pwd_save">保存修改</string>
+
+    <string name="app_setting_updatepwd_oldpwd">原密码</string>
+    <string name="app_setting_updatepwd_newpwd">新密码</string>
+    <string name="app_setting_updatepwd_enturenewpwd">确认新密码</string>
+    <string name="app_setting_updatepwd_title">修改密码</string>
+
+    <string name="app_setting_setpwd_pwd">密码（6位以上数字或字母）</string>
+    <string name="app_setting_setpwd_enturepwd">确认密码</string>
+    <string name="app_setting_setpwd_title">设置密码</string>
+
+    <string name="app_cook_show_praise_number">%1$s人打分</string>
+    <string name="app_cook_show_detail_label_more_recipe">查看相关菜谱</string>
+    <string name="app_cook_show_detail_label_comment">大家的点评</string>
+    <string name="app_cook_show_score_five">5分</string>
+    <string name="app_cook_show_score_four">4分</string>
+    <string name="app_cook_show_score_three">3分</string>
+    <string name="app_cook_show_score_two">2分</string>
+    <string name="app_cook_show_score_one">1分</string>
+    <string name="app_cook_show_detail_comment_tip">发表评论</string>
+    <string name="app_cook_show_detail_edit_report">举报不良信息</string>
+    <string name="app_cook_show_detail_edit_reset">重新编辑</string>
+    <string name="app_cook_show_detail_edit_delete">删除</string>
+    <string name="app_cook_show_detail_edit_cancel">取消</string>
+    <string name="app_cook_show_score_null">暂无\n评分</string>
+    <string name="app_cook_show_score_default">%1$s分</string>
+    <string name="app_cook_show_praise_default_number">0人打分</string>
+    <string name="app_recommend_label_hot">精品菜谱</string>
+    <string name="app_recommend_label_cookshow">晒厨艺</string>
+    <string name="app_recommend_label_dish">买菜帮手</string>
+    <string name="app_cook_show_action_do">我也晒厨艺</string>
+    <string name="app_cook_show_load_more">更多晒厨艺</string>
+    <string name="app_title_pick">剪裁缩放</string>
+    <string name="app_title_select_image">选择图片</string>
+    <string name="app_title_select_album">选择相册</string>
+    <string name="app_pick_preview_more">剪裁缩放\n更多功能敬请期待</string>
+    <string name="app_camera_tip1">小技巧：背景太乱会影响菜品的效果哦</string>
+    <string name="app_cook_show_publish_comment_hint">分享下心得吧</string>
+    <string name="app_cook_show_publish_title_hint">告诉大家这道菜叫什么</string>
+    <string name="app_cook_show_publish_tags_hint">输入或选择标签（最多三个）</string>
+    <string name="app_cook_show_publish_tip">添加准确的标签会让更多人看到你的厨艺</string>
+    <string name="app_tip_publish_tag_count_limit">标签最多不能超过3个</string>
+    <string name="app_tip_publish_title_empty">菜名不能为空</string>
+    <string name="app_cook_show_tag_hot">精选</string>
+    <string name="app_cook_show_tag_new">最新</string>
+    <string name="app_tip_report_success">已举报</string>
+    <string name="app_tip_delete_success">删除成功</string>
+
+    <string name="app_tip_cook_show_updated">更新成功</string>
+
+    <string name="app_button_title_add">添加</string>
+    <string name="app_title_input_food_name">输入菜谱名称</string>
+    <string name="app_food_publish_title_hint">输入菜谱名称（最多12个字）</string>
+    <string name="app_food_publish_tags_hint">输入或选择标签（最多3个）</string>
+    <string name="app_food_publish_tip">为菜谱添加标签</string>
+    <string name="app_tip_food_publish_title_too_long">菜谱名称超过字数限制</string>
+    <string name="app_button_title_review">预览</string>
+    <string name="app_button_title_add_step">添加步骤</string>
+    <string name="app_food_publish_add_cover">添加菜谱名和封面</string>
+    <string name="app_food_publish_title">菜谱名</string>
+    <string name="app_food_publish_add_ingredients">添加食材</string>
+    <string name="app_food_publish_add_ingredients_title">食材</string>
+    <string name="app_food_publish_drag_sort_tip">长按步骤卡片可调整顺序</string>
+    <string name="app_title_edit_food_detail">编辑菜谱</string>
+    <string name="app_button_title_draft_box">存草稿</string>
+    <string name="app_title_step_cover">封面和描述</string>
+    <string name="app_title_step_ingredient">食材</string>
+    <string name="app_food_publish_add_difficulty">难度：－－</string>
+    <string name="app_food_publish_add_difficulty_">难度：%1$s</string>
+    <string name="app_food_publish_add_time">时间：－－</string>
+    <string name="app_food_publish_add_time_">时间：%1$s</string>
+    <string name="app_food_publish_desc_hint">点击添加菜谱描述（120字以内）</string>
+    <string name="app_food_publish_tips_hint">点击添加菜谱小贴士／注意事项（120字以内）</string>
+    <string name="app_food_publish_step_hint">点击添加说明（100字以内）</string>
+    <string name="app_food_publish_ingredient_name_hint">食材名称</string>
+    <string name="app_food_publish_ingredient_quality_hint">用量</string>
+    <string name="app_button_title_rename">重命名</string>
+    <string name="app_tip_publish_update_ingredients">自动删除无效食材</string>
+    <string name="app_button_title_ok">确定</string>
+    <string name="app_food_publish_success">菜谱发布成功</string>
+    <string name="app_food_publish_fail">发布过程出现问题，请重试</string>
+    <string name="app_msg_clear_all">确定清空草稿箱吗？</string>
+    <string name="app_label_continue_edit">继续编辑</string>
+    <string name="app_title_my_recipe">我的菜谱</string>
+    <string name="app_empty_title_my_recipe">还没有上传过菜谱</string>
+    <string name="app_error_get_food_detail_fail">菜谱详情获取失败</string>
+
+    <string name="app_alarm_delete">确定要删除吗？</string>
+    <string name="app_alarm_continue">继续</string>
+    <string name="app_alarm_continue_dialog_title">此手机已被其它账号所使用，继续将取消与其它账号的绑定关系！</string>
+    <string name="app_alarm_continue_dialog_title2">此账号已被其它账号所使用，继续将取消与其它账号的绑定关系！</string>
+    <string name="app_alarm_cancel">取消</string>
+    <string name="app_alarm_delete_step">确定删除该步骤？</string>
+    <string name="app_alarm_publish_long_time">发布过程需要一些时间\n请耐心等待…</string>
+
+    <string name="app_tip_save_to_draft_success">已存为草稿</string>
+    <string name="app_tip_bar_code_scan_loading">扫码查询中…</string>
+    <string name="app_tip_cook_show_loading">厨艺在奔跑中…</string>
+    <string name="app_tip_pay_loading">支付处理中…</string>
+    <string name="app_tip_share_loading">分享中…</string>
+    <string name="app_tip_loading">加载中…</string>
+    <string name="app_tip_refresh_loading">刷新中…</string>
+    <string name="app_tip_publish_invalidate_empty_title">请填写标题</string>
+    <string name="app_tip_publish_invalidate_empty_cover">请添加封面</string>
+    <string name="app_tip_publish_invalidate_empty_ingredient">请填写食材</string>
+    <string name="app_tip_publish_invalidate_empty_step">请填写步骤</string>
+    <string name="app_tip_publish_invalidate_image_uploading">还有图片没上传完成</string>
+    <string name="app_tip_publish_invalidate_ingredient">请确认所有食材都添加了名称</string>
+    <string name="app_tip_publish_invalidate_foodstep">请确认所有文本步骤都添加了说明</string>
+    <string name="app_tip_publish_invalidate_desc_tips_too_long">菜谱描述或小贴士太长</string>
+    <string name="app_tip_publish_invalidate">上传出现未知问题</string>
+    <string name="app_alarm_title_add_step">在此步骤之后插入新步骤</string>
+    <string name="app_dish_load_more">更多新鲜净菜</string>
+    <string name="app_party_load_more">更多活动</string>
+    <string name="app_topic_load_more">更多新鲜事</string>
+    <string name="app_title_my_message">我的消息</string>
+    <string name="app_comment_action_empty">写评论</string>
+    <string name="app_report_miss_ingredient">点我上报食材</string>
+    <string name="app_title_user_page">个人主页</string>
+    <string name="app_tip_add_city">点击添加城市区域</string>
+    <string name="app_card_foot_name">调整卡片</string>
+    <string name="app_dialog_card_title">点击想要置顶的内容</string>
+    <string name="app_card_more_content">点击查看\n更多</string>
+    <string name="app_label_history_search_clear">清空</string>
+    <string name="app_restaurant_list_empty_tip">您收菜地址附近的餐厅,他们提供\n具有餐厅特色的半成品净菜\n提供更快捷的配送服务</string>
+    <string name="app_address_selecte_bottom_text">我们正在努力为更多城市提供服务</string>
+
+</resources>

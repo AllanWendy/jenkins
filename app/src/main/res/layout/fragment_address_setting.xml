@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/uikit_grey"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/uikit_view_title_bar"/>
+
+    <!-- 搜索区 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uikit_white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <EditText
+            android:id="@+id/app_address_input"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/uikit_shape_rect_fill_cycle_grey_light"
+            android:drawableLeft="@drawable/uikit_ic_food_search"
+            android:imeOptions="actionSearch"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/app_address_input_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:padding="@dimen/uikit_default_padding"
+            android:src="@drawable/uikit_ic_clear"
+            android:visibility="gone"/>
+
+
+    </FrameLayout>
+
+    <View style="@style/UIKit.Line.Horizontal"/>
+
+    <FrameLayout
+        android:id="@+id/app_address_suggestion_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/uikit_white"
+        android:visibility="gone">
+
+        <com.wecook.uikit.widget.pulltorefresh.PullToRefreshListView
+            android:id="@+id/uikit_listview"
+            style="@style/UIKit.ListView.Common"
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrDrawable="@drawable/uikit_pull_refresh_flip"
+            ptr:ptrMode="pullFromStart"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uikit_white">
+
+        <TextView
+            android:id="@+id/app_address_auto_location"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/app_ic_label_location"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="点击定位当前地址"/>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/app_address_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@color/uikit_white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/app_ic_label_history_address"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="历史收菜地址"/>
+
+        <View style="@style/UIKit.Line.Horizontal"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/app_address_group_inner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

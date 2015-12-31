@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/uikit_view_title_bar" />
+
+    <com.wecook.uikit.widget.EmptyView
+        android:id="@+id/uikit_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/uikit_grey"
+        android:visibility="gone" />
+
+    <com.wecook.uikit.widget.pulltorefresh.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/app_dish_recent_purchase_list"
+        style="@style/UIKit.ListView.Common"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/uikit_grey"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrDrawable="@drawable/uikit_pull_refresh_flip"
+        ptr:ptrMode="both" />
+</LinearLayout>

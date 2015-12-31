@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/app_point_address_selector_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_bg_editor"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/uikit_default_padding"
+        android:paddingTop="@dimen/uikit_default_padding">
+
+        <ImageView
+            android:id="@+id/app_point_address_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/app_bt_shopcart_selector"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/app_item_point_address_title"
+                style="@style/UIKit.Font.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/uikit_333"/>
+
+            <RelativeLayout
+                android:id="@+id/app_item_point_address_msg_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_item_point_address_title"
+                android:layout_marginTop="@dimen/uikit_default_drawable_padding">
+
+                <TextView
+                    android:id="@+id/app_item_point_address_time"
+                    style="@style/UIKit.Font.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/uikit_default_drawable_padding"
+                    android:textColor="@color/uikit_333"/>
+
+                <TextView
+                    android:id="@+id/app_item_point_address_distance"
+                    style="@style/UIKit.Font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/uikit_default_big_margin"
+                    android:layout_toLeftOf="@+id/app_item_point_address_distance_unit"
+                    android:textColor="@color/uikit_777"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/app_item_point_address_distance_unit"
+                    style="@style/UIKit.Font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="1.5dp"
+                    android:textColor="@color/uikit_777"/>
+
+                <TextView
+                    android:id="@+id/app_item_point_address_phone"
+                    style="@style/UIKit.Font.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/uikit_default_big_margin"
+                    android:layout_toLeftOf="@+id/app_item_point_address_distance"
+                    android:layout_toRightOf="@+id/app_item_point_address_time"
+                    android:textColor="@color/uikit_333"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/app_item_point_address_subtitle"
+                style="@style/UIKit.Font.NormalSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_item_point_address_msg_layout"
+                android:layout_marginTop="@dimen/uikit_default_drawable_padding"
+                android:singleLine="false"
+                android:textColor="@color/uikit_aaa"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View style="@style/UIKit.Line.Horizontal"/>
+
+    <TextView
+        android:id="@+id/app_point_address_agreement"
+        style="@style/UIKit.Font.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:padding="@dimen/uikit_default_big_margin"
+        android:textColor="@color/uikit_999"/>
+</LinearLayout>

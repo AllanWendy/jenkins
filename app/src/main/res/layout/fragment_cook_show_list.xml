@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/uikit_view_title_bar"/>
+
+    <!-- TAB -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="@dimen/app_search_bar_height"
+        android:background="@color/uikit_white">
+
+        <TextView
+            android:id="@+id/app_cook_show_tag_hot"
+            style="@style/UIKit.Font.Big.Dark"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_cook_show_tag_hot"/>
+
+        <View style="@style/UIKit.Line.Vertical"/>
+
+        <TextView
+            android:id="@+id/app_cook_show_tag_new"
+            style="@style/UIKit.Font.Big.Dark"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/app_cook_show_tag_new"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            style="@style/UIKit.Line.Horizontal"
+            android:layout_gravity="bottom"/>
+
+        <com.wecook.uikit.widget.indicator.UnderlinePageIndicator
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/app_cook_show_tag_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            app:selectedColor="@color/uikit_orange"
+            />
+    </FrameLayout>
+
+    <com.wecook.uikit.widget.viewpage.HeightWrappingViewPager
+        android:id="@+id/app_cook_show_view_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/uikit_grey"/>
+
+</LinearLayout>

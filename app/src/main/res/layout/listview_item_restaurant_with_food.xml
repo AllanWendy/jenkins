@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/list_item_restaurant_with_food_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/app_item_resaurant_food_img"
+        style="@style/UIKit.ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/uikit_grey_light"
+        android:scaleType="centerCrop"/>
+    <!--菜品为主-->
+    <LinearLayout
+        android:id="@+id/list_item_restaurant_with_food_layout_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/app_gradient_bt_black_45"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/uikit_default_padding">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="18dp"
+                android:layout_height="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/app_merchants_icon"/>
+
+            <TextView
+                android:id="@+id/app_item_resaurant_name"
+                style="@style/UIKit.Font.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:gravity="center_vertical"
+                android:shadowColor="#A0000000"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="20"
+                android:textColor="@color/uikit_white"
+                android:textSize="23sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/uikit_default_padding"
+            android:paddingLeft="@dimen/uikit_default_padding">
+
+            <TextView
+                android:id="@+id/app_item_resaurant_food_name"
+                style="@style/UIKit.Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:shadowColor="#A0000000"
+                android:shadowDx="2"
+                android:shadowDy="0"
+                android:shadowRadius="20"
+                android:textColor="@color/uikit_white"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/app_item_resaurant_food_price"
+                style="@style/UIKit.Font.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/uikit_default_padding"
+                android:shadowColor="#A0000000"
+                android:shadowDx="2"
+                android:shadowDy="0"
+                android:shadowRadius="20"
+                android:textColor="#fff"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!--餐厅为主-->
+    <LinearLayout
+        android:id="@+id/list_item_restaurant_with_food_layout_restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/app_gradient_bt_black_90"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/uikit_default_big_margin"
+            android:paddingTop="@dimen/uikit_default_padding">
+
+            <ImageView
+                android:id="@+id/list_item_restaurant_big_2_icon"
+                style="@style/UIKit.ImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:id="@+id/list_item_restaurant_big_2_name"
+                style="@style/UIKit.Font.Big.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/uikit_default_space_margin"/>
+
+            <ImageView
+                android:id="@+id/list_item_restaurant_big_2_tag1"
+                style="@style/UIKit.ImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/uikit_default_side_margin"
+                android:padding="1dp"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:id="@+id/list_item_restaurant_big_2_tag2"
+                style="@style/UIKit.ImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/uikit_default_side_margin"
+                android:padding="1dp"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:id="@+id/list_item_restaurant_big_2_tag3"
+                style="@style/UIKit.ImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="@dimen/uikit_default_side_margin"
+                android:padding="1dp"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/uikit_default_padding"
+            android:paddingLeft="@dimen/uikit_default_big_margin"
+            android:paddingTop="@dimen/uikit_default_padding_small">
+
+
+            <TextView
+                android:id="@+id/list_item_restaurant_big_2_grade"
+                style="@style/UIKit.Font.Small.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                style="@style/UIKit.Line.Vertical"
+                android:layout_width="1.5dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/uikit_default_padding_small"
+                android:layout_marginRight="@dimen/uikit_default_padding_small"
+                android:background="@color/uikit_white"/>
+
+            <TextView
+                android:id="@+id/list_item_restaurant_big_2_sale"
+                style="@style/UIKit.Font.Small.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                style="@style/UIKit.Line.Vertical"
+                android:layout_width="1.5dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/uikit_default_padding_small"
+                android:layout_marginRight="@dimen/uikit_default_padding_small"
+                android:background="@color/uikit_white"/>
+
+            <TextView
+                android:id="@+id/list_item_restaurant_big_2_express_type_txt"
+                style="@style/UIKit.Font.Small.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.wecook.uikit.widget.GradientView
+        android:id="@+id/item_resaurant_food_bgview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:selectableItemBackground"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/line"
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_height="1dp"
+        android:background="@color/uikit_white"/>
+</FrameLayout>

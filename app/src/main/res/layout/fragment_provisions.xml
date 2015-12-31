@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey"
+    android:orientation="vertical">
+
+    <!-- TitleBar -->
+    <include layout="@layout/uikit_view_title_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uikit_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/uikit_default_padding_big"
+                android:background="@color/uikit_grey"/>
+
+
+            <!-- 交易条款-->
+            <include
+                android:id="@+id/app_provisions_item_trading"
+                layout="@layout/view_my_feature_item"/>
+
+
+            <View
+                style="@style/UIKit.Line.Horizontal"
+                android:layout_marginLeft="16dp"/>
+
+
+            <!-- 味库服务协议-->
+            <include
+                android:id="@+id/app_provisions_item_service"
+                layout="@layout/view_my_feature_item"/>
+
+
+            <View
+                style="@style/UIKit.Line.Horizontal"
+                android:layout_marginLeft="16dp"/>
+
+
+            <!--味库隐私条款-->
+            <include
+                android:id="@+id/app_provisions_item_privacy"
+                layout="@layout/view_my_feature_item"/>
+
+            <View
+                style="@style/UIKit.Line.Horizontal"
+                android:layout_marginLeft="16dp"/>
+
+            <!-- 半成品保险条款-->
+            <include
+                android:id="@+id/app_provisions_item_semi_finished_products"
+                layout="@layout/view_my_feature_item"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

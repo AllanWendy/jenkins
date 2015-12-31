@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/uikit_grey"/>
+
+    <!-- 地址 -->
+    <View
+        android:id="@+id/app_order_check_address_group_top_div"
+        style="@style/UIKit.Line.Horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--地址-->
+        <LinearLayout
+            android:id="@+id/app_order_check_address_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_bg_editor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/app_ic_order_address"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/uikit_default_space_margin"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/app_order_check_phone"
+                    style="@style/UIKit.Font.Dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableLeft="@drawable/app_ic_phone"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/app_order_check_name"
+                    style="@style/UIKit.Font.Dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/app_order_check_phone"
+                    android:hint="请填写收菜地址"/>
+
+                <TextView
+                    android:id="@+id/app_order_check_address"
+                    style="@style/UIKit.Font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/app_order_check_name"
+                    android:singleLine="false"
+                    android:textSize="15.8sp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/app_ic_goto"/>
+        </LinearLayout>
+        <!--自提点-->
+        <RelativeLayout
+            android:id="@+id/app_order_check_address_point_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_bg_editor"
+            android:paddingBottom="15dp"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/app_order_check_address_point_line"
+                style="@style/UIKit.Line.Horizontal"
+                android:layout_marginBottom="15dp"/>
+
+            <ImageView
+                android:id="@+id/app_order_check_address_point_icon"
+                style="@style/UIKit.ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="@dimen/uikit_default_space_margin"
+                android:src="@drawable/app_ic_goto"/>
+
+            <TextView
+                android:id="@+id/app_order_check_address_point_title"
+                style="@style/UIKit.Font.Small.Dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_order_check_address_point_line"
+                android:layout_toLeftOf="@+id/app_order_check_address_point_icon"
+                android:paddingLeft="38dp"
+                android:text="收获不便时，可选择自提点提货"/>
+
+            <TextView
+                android:id="@+id/app_order_check_address_point_subtitle"
+                style="@style/UIKit.Font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_order_check_address_point_title"
+                android:layout_toLeftOf="@+id/app_order_check_address_point_icon"
+                android:paddingLeft="38dp"
+                android:singleLine="false"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/app_order_check_address_group_bottom_div"
+        style="@style/UIKit.Line.Horizontal"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/uikit_grey"/>
+
+    <TextView
+        android:id="@+id/app_order_check_notice"
+        style="@style/UIKit.Font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uikit_grey"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="false"
+        android:textColor="#ffab4c"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/app_order_check_time_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_bg_editor"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="12dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/app_ic_label_delivery_time"/>
+
+            <TextView
+                style="@style/UIKit.Font.Dark.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/uikit_default_space_margin"
+                android:text="配送方式"
+                android:textColor="@color/uikit_777"
+                android:textSize="@dimen/uikit_default_font_normal_small"/>
+
+
+            <LinearLayout
+                android:id="@+id/app_order_check_delivery_time_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/app_order_check_delivery_time_type"
+                    style="@style/UIKit.Font.Small.Dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:text="选择配送时间"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/app_order_check_delivery_time_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/uikit_default_margin"
+                android:src="@drawable/app_ic_goto"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/app_order_check_delivery_time_tv"
+            style="@style/UIKit.Font.Small.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uikit_default_big_margin"
+            android:background="@color/uikit_grey_light_l"
+            android:gravity="center_vertical|right"
+            android:padding="@dimen/uikit_default_middle_side_padding"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/uikit_grey"/>
+</LinearLayout>

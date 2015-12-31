@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <color name="uikit_search_url_text_normal">#7fa87f</color>
+    <color name="uikit_search_url_text_selected">@android:color/black</color>
+    <color name="uikit_search_url_text_pressed">@android:color/black</color>
+
+    <color name="uikit_black">#ff000000</color>
+    <color name="uikit_777">#ff777777</color>
+    <color name="uikit_999">#ff999999</color>
+    <color name="uikit_333">#ff333333</color>
+    <color name="uikit_aaa">#ffaaaaaa</color>
+    <color name="uikit_ccc">#ffcccccc</color>
+    <color name="uikit_black_light">#ff202020</color>
+    <color name="uikit_dark">#ff030303</color>
+    <color name="uikit_dark_light">#ff868686</color>
+    <color name="uikit_white">#ffffffff</color>
+    <color name="uikit_orange">#ffff7769</color>
+    <color name="uikit_orange_pressed">#ffD55F4F</color>
+    <color name="uikit_grey_unable">#ff999999</color>
+    <color name="uikit_orange_transparent_70">#b2ff7769</color>
+    <color name="uikit_grey_dark">#ffdbdcdb</color>
+    <color name="uikit_grey_bg">#fff0eeeb</color>
+    <color name="uikit_grey">#ffececec</color>
+    <color name="uikit_grey_search_bg">#efeeed</color>
+    <color name="uikit_grey_light">#fff7f7f7</color>
+    <color name="uikit_grey_light_l">#fff4f4f4</color>
+    <color name="uikit_pulltorefresh_bg">#ffefeeed</color>
+    <color name="uikit_transparent">#00ffffff</color>
+    <color name="uikit_green">#ff74c841</color>
+    <color name="uikit_red">#ffff644e</color>
+    <color name="uikit_search_bg">#e5f7f7f7</color>
+
+    <color name="uikit_font_dark">#ff4a4a4a</color>
+    <color name="uikit_font_dark_light">#ff868686</color>
+    <color name="uikit_font_white">@color/uikit_white</color>
+    <color name="uikit_font_orange">#ffff644e</color>
+    <color name="uikit_font_brown">#ffb48c86</color>
+    <color name="uikit_font_blue">#ff3a95ff</color>
+    <color name="uikit_font_yellow">#ffffaf00</color>
+    <color name="uikit_font_blue_light">#ffbcdafc</color>
+
+    <color name="uikit_font_grep">#ff9b9b9b</color>
+    <color name="uikit_font_grep_dash">#ff979797</color>
+    <color name="uikit_font_grep_dark">#ff4a4a4a</color>
+    <color name="uikit_font_grep_light">#ffe6e6e6</color>
+
+
+    <color name="uikit_light_transparent_10">#19ffffff</color>
+    <color name="uikit_light_transparent_20">#33ffffff</color>
+    <color name="uikit_light_transparent_25">#40ffffff</color>
+    <color name="uikit_light_transparent_30">#4cffffff</color>
+    <color name="uikit_light_transparent_40">#66ffffff</color>
+    <color name="uikit_light_transparent_50">#7fffffff</color>
+    <color name="uikit_light_transparent_60">#99ffffff</color>
+    <color name="uikit_light_transparent_70">#b2ffffff</color>
+    <color name="uikit_light_transparent_80">#ccffffff</color>
+    <color name="uikit_light_transparent_90">#e5ffffff</color>
+    <color name="uikit_light_transparent_95">#f2ffffff</color>
+
+    <color name="uikit_dark_transparent_10">#19000000</color>
+    <color name="uikit_dark_transparent_20">#33000000</color>
+    <color name="uikit_dark_transparent_30">#4c000000</color>
+    <color name="uikit_dark_transparent_40">#66000000</color>
+    <color name="uikit_dark_transparent_45">#72000000</color>
+    <color name="uikit_dark_transparent_50">#7f000000</color>
+    <color name="uikit_dark_transparent_60">#99000000</color>
+    <color name="uikit_dark_transparent_70">#b2000000</color>
+    <color name="uikit_dark_transparent_80">#cc000000</color>
+    <color name="uikit_dark_transparent_90">#e5000000</color>
+    <color name="uikit_dark_transparent_95">#f2000000</color>
+</resources>

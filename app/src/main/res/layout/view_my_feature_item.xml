@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_my_feature_item_height"
+    android:background="@drawable/app_item_background"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/app_my_feature_icon"
+        android:layout_width="@dimen/app_my_feature_item_icon_width"
+        android:layout_height="@dimen/app_my_feature_item_icon_height"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerInside"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/app_my_feature_name"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/uikit_default_margin"
+            android:textSize="@dimen/uikit_default_font_normal_small"/>
+
+        <TextView
+            android:id="@+id/app_my_feature_new_mark"
+            style="@style/UIKit.Font.Small.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/app_shape_new_msg"
+            android:gravity="center"
+            android:minHeight="18dp"
+            android:minWidth="18dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/app_my_feature_sub_name"
+        style="@style/UIKit.Font.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/uikit_default_side_padding"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/app_my_feature_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/app_my_feature_item_icon_height"
+        android:paddingRight="16dp"
+        android:src="@drawable/app_ic_goto"/>
+</LinearLayout>

@@ -1,0 +1,74 @@
+@startuml
+
+interface IShareObject
+abstract class BaseShareObject
+class ShareAudio
+class ShareImage
+class ShareText
+class ShareVideo
+class ShareWebpage
+
+IShareObject <|-- BaseShareObject
+BaseShareObject <|-- ShareAudio
+BaseShareObject <|-- ShareImage
+BaseShareObject <|-- ShareText
+BaseShareObject <|-- ShareVideo
+BaseShareObject <|-- ShareWebpage
+
+interface IShareOption
+abstract class BaseOption {
+    Context context
+    IShareObject object
+    doLogin()
+    doAuth()
+    doShare()
+}
+abstract class QQConnect
+class QQWeibo
+class QQFriends
+class QQZone
+class RenRen
+class WeiChat
+class WeiBlog
+
+IShareOption <|-- BaseOption
+
+BaseOption <|-- QQConnect
+QQConnect <|-- QQFriends
+QQConnect <|-- QQWeibo
+QQConnect <|-- QQZone
+BaseOption <|-- RenRen
+BaseOption <|-- WeiChat
+BaseOption <|-- WeiBlog
+
+BaseOption <-- ShareException
+class ShareManager
+class ShareManager.ShareCreator
+
+ShareManager <-- ShareManager.ShareCreator
+ShareManager.ShareCreator <-- BaseOption
+ShareManager <-- ShareConfiguration
+
+
+class ShareActivity
+class ShareConfiguration
+class ShareEventReceiver
+class ShareException
+
+class ShareTester
+class ShareDataProcessor
+
+interface IShareOption.IShareListener
+
+ShareEventReceiver <-- ShareManager
+
+IShareOption.IShareListener <|-- ShareActivity
+
+ShareActivity <-- ShareManager
+ShareActivity <-- ShareTester
+
+IShareOption <-- IShareOption.IShareListener
+
+ShareTester <-- IShareObject
+
+@enduml

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey"
+    android:orientation="vertical">
+
+    <include layout="@layout/uikit_view_title_bar"/>
+
+
+    <com.wecook.uikit.widget.EmptyView
+        android:id="@+id/app_wallet_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <View
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_marginTop="@dimen/uikit_default_bigger_margin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uikit_white"
+        android:orientation="vertical">
+        <!--菜金-->
+        <include
+            android:id="@+id/app_wallet_cj"
+            layout="@layout/view_my_feature_item"/>
+
+        <View
+            style="@style/UIKit.Line.Horizontal"
+            android:layout_marginLeft="16dp"/>
+
+        <!--优惠券-->
+        <include
+            android:id="@+id/app_wallet_coupons"
+            layout="@layout/view_my_feature_item"/>
+
+        <View
+            style="@style/UIKit.Line.Horizontal"/>
+    </LinearLayout>
+</LinearLayout>

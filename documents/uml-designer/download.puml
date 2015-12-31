@@ -1,0 +1,106 @@
+@startuml
+class DownloadController{
+private List<Downloader> mDownloaders;
+public static Downloader obtainDownloader(DownloadConfig config);
+}
+class DownloadException
+class Downloader{
+void add(Downloadable downloadable);
+void addAll(List<Downloadable> item);
+void remove(Downloadable downloadable);
+void removeAll(List<Downloadable> item);
+void pause(Downloadable downloadable);
+void resume(Downloadable downloadable);
+void init(DownloadConfig);
+void clear();
+void destroy();
+List<Downloadable> queryAll();
+addDownloadListener(DownloadListener listener);
+removeDownloadListener(DownloadListener listener);
+}
+class DownloadList{
+void add(Downloadable downloadable);
+void remove(Downloadable downloadable);
+void clear();
+}
+class DownloadWorker{
+void runPrepare(Downloadable,RunState);
+void runStart(Downloadable,RunState);
+void runResume(Downloadable,RunState);
+void runProgress(Downloadable,RunState);
+void runPause(Downloadable,RunState);
+void runEnd(Downloadable,RunState);
+void runError(Downloadable,RunState);
+}
+class DownloadConfig{
+private ExecutorService mExecutor;
+private int mCoreCount;
+private HibernatePolicy mPolicy;
+getXXX();
+setXXX();
+}
+abstract class HibernatePolicy{
+private void performPrepare();
+private void performCommit();
+abstract void prepare();
+abstract void commit();
+protected HibernatePolicy append(Downloadable downloadable);
+protected HibernatePolicy appendAll(List<Downloadable> downloadable);
+}
+class JsonFilePolicy {
+void prepare();
+void commit();
+JsonFilePolicy append();
+}
+class DatabasePolicy{
+void prepare();
+void commit();
+DatabasePolicy append();
+}
+
+interface Downloadable {
+public String getUrl();
+public String getName();
+public String getSaveDir();
+public long getSize();
+public long getTotal();
+public long getProgress();
+}
+
+interface DownloadListener{
+void onPrepare(Downloadable);
+void onStart(Downloadable);
+void onResume(Downloadable);
+void onProgress(Downloadable);
+void onPause(Downloadable);
+void onEnd(Downloadable);
+void onError(Downloadable);
+}
+
+interface Runnable{
+}
+enum RunState{
+PREPARE,
+START,
+RESUME,
+PROGRESS,
+PAUSE,
+END,
+ERROR;
+}
+HibernatePolicy <|-- JsonFilePolicy
+HibernatePolicy <|-- DatabasePolicy
+Runnable <|-- DownloadWorker
+
+Downloader <-- DownloadList
+Downloader <-- DownloadWorker
+Downloader <-- DownloadConfig
+
+Downloader <-- Downloadable
+DownloadWorker <-- RunState
+Downloader <-- DownloadListener
+
+DownloadList <-- HibernatePolicy
+
+DownloadController <-- Downloader
+@enduml

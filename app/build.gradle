@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../debug.wecookkeystore')
+            storePassword 'android'
+        }
+
+        release {
+            keyAlias 'wecook'
+            keyPassword 'wc58902639wc'
+            storeFile file('../release.wecookkeystore')
+            storePassword 'wc58902639wc'
+        }
+    }
+    compileSdkVersion 21
+    buildToolsVersion "19.1.0"
+    defaultConfig {
+        applicationId "cn.wecook.app"
+        minSdkVersion 11
+        targetSdkVersion 21
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+        manifestPlaceholders = [CHANNEL: CHANNEL_NAME, DEBUG_VERSION: DEBUG_VERSION, TEST: TEST_MODE]
+        signingConfig signingConfigs.debug
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            jniDebuggable true
+            signingConfig signingConfigs.debug
+            renderscriptDebuggable true
+        }
+    }
+    productFlavors {
+    }
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [CHANNEL: name]
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':sdk')
+}

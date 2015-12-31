@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <View
+        style="@style/UIKit.Line.Horizontal"/>
+
+    <TextView
+        android:id="@+id/app_dialog_action_name"
+        style="@style/UIKit.Font.Big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/uikit_default_padding"
+        android:background="@drawable/app_bt_background"/>
+
+</LinearLayout>

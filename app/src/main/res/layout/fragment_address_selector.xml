@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- SearchBar -->
+    <RelativeLayout
+        android:id="@+id/app_address_selector_titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/uikit_action_bar_default_height"
+        android:background="@color/uikit_white">
+
+        <include layout="@layout/uikit_view_title_bar" />
+
+        <TextView
+            android:id="@+id/app_address_selector_current_address"
+            style="@style/UIKit.Font.Orange"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@drawable/app_bt_address_title_icon_up"
+            android:gravity="center"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/app_address_selector_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/app_address_selecte_available_true"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:background="@color/uikit_transparent">
+
+        <ListView
+            android:id="@+id/app_address_selector_listview"
+            style="@style/UIKit.ListView.Common"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_address_selecte_bj"
+            android:paddingTop="10dp"
+            android:visibility="invisible"
+
+            ></ListView>
+
+        <com.wecook.uikit.widget.EmptyView
+            android:id="@+id/app_address_selector_emptyview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/app_address_selector_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/app_bg_gradient"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/app_address_selector_bottom_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:background="@color/uikit_transparent"
+                android:gravity="center"
+                android:text="@string/app_address_selecte_bottom_text"
+                android:textColor="@color/app_address_selecte_available_true" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

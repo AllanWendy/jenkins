@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/listview_item_order_detail">
+
+    <LinearLayout
+        android:id="@+id/app_order_detail_dish_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?android:selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/uikit_default_side_margin"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/app_order_detail_dish_name"
+                style="@style/UIKit.Font.Dark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/uikit_default_big_margin"
+                android:layout_weight="1"
+                android:text="订单号"/>
+
+            <ImageView
+                android:id="@+id/app_order_detail_dish_more"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/uikit_default_biggest_margin"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/app_bt_circle_button_down"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/app_order_detail_dish_count"
+                style="@style/UIKit.Font.Dark"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="left|center_vertical"
+                android:text="x1"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/app_order_detail_dish_price"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:minWidth="90dp"
+            android:text="38.00"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/app_order_detail_dish_bottom_line"
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_marginLeft="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/app_order_detail_dish_more_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+    </LinearLayout>
+
+</LinearLayout>

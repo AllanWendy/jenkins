@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="UIKit"/>
+
+    <style name="UIKit.Font">
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textColor">@color/uikit_font_grep</item>
+        <item name="android:textSize">@dimen/uikit_default_font_normal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="UIKit.Font.White">
+        <item name="android:textColor">@color/uikit_font_white</item>
+    </style>
+
+    <style name="UIKit.Font.Light">
+        <item name="android:textColor">@color/uikit_font_grep_light</item>
+    </style>
+
+    <style name="UIKit.Font.Dark">
+        <item name="android:textColor">@color/uikit_txt_font_dark</item>
+    </style>
+
+    <style name="UIKit.Font.Dark.Light">
+        <item name="android:textColor">@color/uikit_font_dark_light</item>
+    </style>
+
+    <style name="UIKit.Font.Orange">
+        <item name="android:textColor">@color/uikit_txt_font_orange</item>
+    </style>
+
+    <style name="UIKit.Font.Brown">
+        <item name="android:textColor">@color/uikit_font_brown</item>
+    </style>
+
+    <style name="UIKit.EditText" parent="UIKit.Font">
+        <item name="android:singleLine">false</item>
+        <item name="android:textColorHint">@color/uikit_font_grep_light</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">top</item>
+        <item name="android:padding">@dimen/uikit_default_side_padding</item>
+    </style>
+
+    <style name="UIKit.EditText.White">
+        <item name="android:textColor">@color/uikit_font_white</item>
+    </style>
+
+    <style name="UIKit.EditText.Light">
+        <item name="android:textColor">@color/uikit_font_grep_light</item>
+    </style>
+
+    <style name="UIKit.EditText.Dark">
+        <item name="android:textColor">@color/uikit_txt_font_dark</item>
+    </style>
+
+    <style name="UIKit.EditText.Dark.Light">
+        <item name="android:textColor">@color/uikit_font_dark_light</item>
+    </style>
+
+    <style name="UIKit.EditText.Orange">
+        <item name="android:textColor">@color/uikit_txt_font_orange</item>
+    </style>
+
+    <style name="UIKit.EditText.Brown">
+        <item name="android:textColor">@color/uikit_font_brown</item>
+    </style>
+
+    <style name="UIKit.Font.Large">
+        <item name="android:textSize">@dimen/uikit_default_font_large</item>
+    </style>
+
+    <style name="UIKit.Font.Super">
+        <item name="android:textSize">@dimen/uikit_default_font_super_large</item>
+    </style>
+
+    <style name="UIKit.Font.Large.White">
+        <item name="android:textColor">@color/uikit_font_white</item>
+    </style>
+
+    <style name="UIKit.Font.Large.Light">
+        <item name="android:textColor">@color/uikit_font_grep_light</item>
+    </style>
+
+    <style name="UIKit.Font.Large.Dark">
+        <item name="android:textColor">@color/uikit_txt_font_dark</item>
+    </style>
+
+    <style name="UIKit.Font.Large.Orange">
+        <item name="android:textColor">@color/uikit_txt_font_orange</item>
+    </style>
+
+    <style name="UIKit.Font.Large.Brown">
+        <item name="android:textColor">@color/uikit_font_brown</item>
+    </style>
+
+    <style name="UIKit.Font.Huge">
+        <item name="android:textSize">@dimen/uikit_default_font_huge</item>
+    </style>
+
+    <style name="UIKit.Font.Huge.White">
+        <item name="android:textColor">@color/uikit_font_white</item>
+    </style>
+
+    <style name="UIKit.Font.Huge.Light">
+        <item name="android:textColor">@color/uikit_font_grep_light</item>
+    </style>
+
+    <style name="UIKit.Font.Huge.Dark">
+        <item name="android:textColor">@color/uikit_txt_font_dark</item>
+    </style>
+
+    <style name="UIKit.Font.Huge.Orange">
+        <item name="android:textColor">@color/uikit_txt_font_orange</item>
+    </style>
+
+    <style name="UIKit.Font.Huge.Brown">
+        <item name="android:textColor">@color/uikit_font_brown</item>
+    </style>
+
+    <style name="UIKit.Font.Big">
+        <item name="android:textSize">@dimen/uikit_default_font_big</item>
+    </style>
+
+    <style name="UIKit.Font.Biggest">
+        <item name="android:textSize">@dimen/uikit_default_font_biggest</item>
+    </style>
+
+
+    <style name="UIKit.Font.Big.White">
+        <item name="android:textColor">@color/uikit_font_white</item>
+    </style>
+
+    <style name="UIKit.Font.Big.Light">
+        <item name="android:textColor">@color/uikit_font_grep_light</item>
+    </style>
+
+    <style name="UIKit.Font.Big.Dark">
+        <item name="android:textColor">@color/uikit_txt_font_dark</item>
+    </style>
+
+    <style name="UIKit.Font.Big.Orange">
+        <item name="android:textColor">@color/uikit_txt_font_orange</item>
+    </style>
+
+    <style name="UIKit.Font.Big.Brown">
+        <item name="android:textColor">@color/uikit_font_brown</item>
+    </style>
+
+
+    <style name="UIKit.Font.Small">
+        <item name="android:textSize">@dimen/uikit_default_font_small</item>
+    </style>
+
+    <style name="UIKit.Font.NormalSmall">
+        <item name="android:textSize">@dimen/uikit_default_font_normal_small</item>
+    </style>
+
+
+    <style name="UIKit.Font.Classfy">
+        <item name="android:textSize">@dimen/uikit_default_font_normal_small</item>
+        <item name="android:textColor">@color/uikit_777</item>
+        <item name="android:layout_marginTop">@dimen/uikit_default_side_margin</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="UIKit.Font.Small.White">
+        <item name="android:textColor">@color/uikit_font_white</item>
+    </style>
+
+    <style name="UIKit.Font.Small.Light">
+        <item name="android:textColor">@color/uikit_font_grep_light</item>
+    </style>
+
+    <style name="UIKit.Font.Small.Dark">
+        <item name="android:textColor">@color/uikit_txt_font_dark</item>
+    </style>
+
+    <style name="UIKit.Font.Small.Orange">
+        <item name="android:textColor">@color/uikit_txt_font_orange</item>
+    </style>
+
+    <style name="UIKit.Font.Small.Brown">
+        <item name="android:textColor">@color/uikit_font_brown</item>
+    </style>
+
+    <style name="UIKit.Font.Small.Blue">
+        <item name="android:textColor">@color/uikit_font_blue</item>
+    </style>
+
+    <style name="UIKit.Font.Smaller">
+        <item name="android:textSize">@dimen/uikit_default_font_smaller</item>
+    </style>
+
+    <style name="UIKit.Font.Smaller.White">
+        <item name="android:textColor">@color/uikit_font_white</item>
+    </style>
+
+    <style name="UIKit.Font.Smaller.Light">
+        <item name="android:textColor">@color/uikit_font_grep_light</item>
+    </style>
+
+    <style name="UIKit.Font.Smaller.Dark">
+        <item name="android:textColor">@color/uikit_txt_font_dark</item>
+    </style>
+
+    <style name="UIKit.Font.Smaller.Orange">
+        <item name="android:textColor">@color/uikit_txt_font_orange</item>
+    </style>
+
+    <style name="UIKit.Font.Smaller.Brown">
+        <item name="android:textColor">@color/uikit_font_brown</item>
+    </style>
+
+    <style name="UIKit.Font.Smaller.Blue">
+        <item name="android:textColor">@color/uikit_font_blue</item>
+    </style>
+
+    <style name="UIKit.Button" parent="UIKit.Font">
+        <item name="android:background">@drawable/uikit_shape_rect_fill_white_side_grey_dark</item>
+        <item name="android:textColor">@color/uikit_black</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="UIKit.Button.Orange">
+        <item name="android:background">@drawable/uikit_shape_rect_fill_white_side_orange</item>
+        <item name="android:textColor">@color/uikit_bt_orange_white_font</item>
+    </style>
+
+    <style name="UIKit.Line">
+        <item name="android:background">@color/uikit_font_grep_light</item>
+    </style>
+
+    <style name="UIKit.Line.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
+
+    <style name="UIKit.Line.Horizontal.Orange">
+        <item name="android:background">@color/uikit_orange</item>
+    </style>
+
+    <style name="UIKit.Line.Horizontal.Light">
+        <item name="android:background">#fff7f7f7</item>
+    </style>
+
+    <style name="UIKit.Line.Horizontal.Tab">
+        <item name="android:background">@drawable/uikit_bg_orange_transparent</item>
+        <item name="android:layout_height">2dp</item>
+    </style>
+
+    <style name="UIKit.Line.Vertical">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="UIKit.Line.Vertical.Light">
+        <item name="android:background">#fff7f7f7</item>
+    </style>
+
+    <style name="UIKit.ImageView">
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="UIKit.ListView"/>
+
+    <style name="UIKit.ListView.Common">
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:divider">@android:color/transparent</item>
+    </style>
+
+    <style name="UIKit.Dialog" parent="android:Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/UIKit.Animation.Dialog</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustPan|stateAlwaysHidden</item>
+        <item name="android:windowCloseOnTouchOutside" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="UIKit.LoadingDialog" parent="UIKit.Dialog">
+        <item name="android:windowAnimationStyle">@style/UIKit.Animation.LoadingDialog</item>
+    </style>
+
+    <style name="UIKit.Dialog.Fixed" parent="UIKit.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateUnspecified</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="UIKit.Dialog.NO.ANIMATION" parent="UIKit">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside" tools:ignore="NewApi">true</item>
+
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateUnspecified</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="UIKit.Animation"/>
+
+    <style name="UIKit.Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/uikit_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/uikit_dialog_exit</item>
+    </style>
+
+    <style name="UIKit.Animation.LoadingDialog">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@anim/uikit_fade_out</item>
+    </style>
+
+
+    <style name="UIKit.DialogSlideIn" parent="UIKit.Dialog">
+        <item name="android:windowAnimationStyle">@style/UIKit.Animation.LoginDialogStyleIn</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustPan|stateAlwaysHidden</item>
+        <item name="android:windowCloseOnTouchOutside" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="UIKit.DialogSlideBack" parent="UIKit.Dialog">
+        <item name="android:windowAnimationStyle">@style/UIKit.Animation.LoginDialogStyleBack</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustPan|stateAlwaysHidden</item>
+        <item name="android:windowCloseOnTouchOutside" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="UIKit.Animation.LoginDialogStyleIn">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_out</item>
+    </style>
+
+    <style name="UIKit.Animation.LoginDialogStyleBack">
+        <item name="android:windowEnterAnimation">@anim/dialog_back_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_back_out</item>
+    </style>
+</resources>

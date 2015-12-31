@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/UIKit.Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="综合评分" />
+
+            <TextView
+                android:id="@+id/app_restaurant_comment_score"
+                style="@style/UIKit.Font.Big.Orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="- -" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/UIKit.Line.Vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/app_restaurant_comment_all"
+                style="@style/UIKit.Font.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/app_bt_comment_type"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="全部"
+                android:textSize="14sp"
+                android:textColor="@color/app_font_dark_white" />
+
+            <TextView
+                android:id="@+id/app_restaurant_comment_good"
+                style="@style/UIKit.Font.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/app_bt_comment_type"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="好评"
+                android:textSize="14sp"
+                android:textColor="@color/app_font_dark_white" />
+
+            <TextView
+                android:id="@+id/app_restaurant_comment_middle"
+                style="@style/UIKit.Font.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/app_bt_comment_type"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="中评"
+                android:textSize="14sp"
+                android:textColor="@color/app_font_dark_white" />
+
+            <TextView
+                android:id="@+id/app_restaurant_comment_bad"
+                style="@style/UIKit.Font.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/app_bt_comment_type"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="差评"
+                android:textSize="14sp"
+                android:textColor="@color/app_font_dark_white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/uikit_grey_light" />
+
+</LinearLayout>

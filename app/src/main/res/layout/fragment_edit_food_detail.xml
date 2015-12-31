@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey_light">
+
+    <!-- title bar-->
+    <include layout="@layout/uikit_view_title_bar" />
+
+    <!-- 可变换的 -->
+    <com.wecook.uikit.widget.dragsort.DragSortGridView
+        style="@style/UIKit.ListView.Common"
+        android:id="@+id/app_food_publish_drag_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:horizontalSpacing="@dimen/uikit_default_padding"
+        android:verticalSpacing="@dimen/uikit_default_padding"
+        android:numColumns="3"
+        android:layout_marginLeft="@dimen/uikit_default_padding"
+        android:layout_marginRight="@dimen/uikit_default_padding"/>
+
+    <View style="@style/UIKit.Line.Horizontal" />
+
+    <!-- 底部动作区 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/uikit_default_button_height">
+
+        <FrameLayout
+            android:id="@+id/app_food_publish_add_step"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/app_bt_background">
+
+            <TextView
+                style="@style/UIKit.Font.Orange"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:drawableRight="@drawable/app_ic_add_step"
+                android:drawablePadding="@dimen/uikit_default_drawable_padding"
+                android:text="@string/app_button_title_add_step" />
+        </FrameLayout>
+
+        <View style="@style/UIKit.Line.Vertical" />
+
+        <TextView
+            style="@style/UIKit.Font.Orange"
+            android:id="@+id/app_food_publish_review"
+            android:layout_width="@dimen/app_edit_food_review_width"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_button_title_review"
+            android:background="@drawable/app_bt_background"/>
+
+    </LinearLayout>
+</LinearLayout>

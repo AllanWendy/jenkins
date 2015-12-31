@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:gravity="bottom"
+              android:layout_margin="@dimen/uikit_default_side_padding"
+              android:background="@drawable/uikit_shape_rect_fill_white_side_grey">
+
+    <TextView
+        style="@style/UIKit.Font.Big.Dark"
+        android:id="@+id/app_dialog_confirm_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/uikit_default_padding"/>
+
+    <View style="@style/UIKit.Line.Horizontal.Orange"/>
+
+    <TextView
+        style="@style/UIKit.Font.Dark"
+        android:id="@+id/app_dialog_confirm_message"
+        android:singleLine="false"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:paddingRight="@dimen/uikit_default_padding"
+        android:paddingTop="@dimen/uikit_default_padding_big"
+        android:paddingBottom="@dimen/uikit_default_padding_big"/>
+
+    <View style="@style/UIKit.Line.Horizontal"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/UIKit.Font.Dark"
+            android:id="@+id/app_dialog_confirm_ok"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/uikit_default_padding"
+            android:text="@string/app_button_title_ok"/>
+
+        <View style="@style/UIKit.Line.Vertical"/>
+
+        <TextView
+            style="@style/UIKit.Font.Dark"
+            android:id="@+id/app_dialog_confirm_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/uikit_default_padding"
+            android:text="@string/app_button_title_cancel"/>
+    </LinearLayout>
+
+</LinearLayout>

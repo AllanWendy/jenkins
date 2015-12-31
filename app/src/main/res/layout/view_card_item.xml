@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <ImageView
+        android:id="@+id/app_card_item_image"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginRight="24dp"/>
+
+    <TextView
+        style="@style/UIKit.Font.Dark"
+        android:id="@+id/app_card_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/app_card_item_image"
+        android:text="买菜帮手"
+        />
+
+    <TextView
+        style="@style/UIKit.Font.Orange"
+        android:id="@+id/app_card_item_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/uikit_default_padding"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:paddingRight="@dimen/uikit_default_padding"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:text="已置顶"/>
+
+    <View style="@style/UIKit.Line.Horizontal"
+        android:background="@color/uikit_grey_light"
+        android:layout_below="@id/app_card_item_image"
+        android:layout_toRightOf="@id/app_card_item_image"
+        />
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/app_cook_show_cover_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/app_cook_show_cover"
+            style="@style/UIKit.ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside" />
+
+        <View
+            style="@style/Cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/app_cook_show_bottom_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/uikit_shape_gradient_up_to_dark"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/app_cook_show_score_bg"
+            android:layout_width="@dimen/app_recommend_cook_show_score_bg_size"
+            android:layout_height="@dimen/app_recommend_cook_show_score_bg_size"
+            android:layout_gravity="right"
+            android:background="@color/uikit_orange"
+            android:rotation="45"
+            android:translationX="@dimen/app_recommend_cook_show_translation_x"
+            android:translationY="@dimen/app_recommend_cook_show_translation_y"
+            android:visibility="gone"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/app_cook_show_score"
+            style="@style/UIKit.Font.Small.White"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:rotation="45"
+            android:textSize="9dp"
+            android:visibility="gone"
+            tools:ignore="UnusedAttribute" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/app_cook_show_author_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="@dimen/uikit_default_space_padding">
+
+        <com.wecook.uikit.widget.shape.CircleImageView
+            android:id="@+id/app_cook_show_avatar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/app_cook_show_name"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/uikit_default_space_padding"
+            android:background="@drawable/app_empty_grey_light"
+            android:gravity="center_vertical" />
+
+    </LinearLayout>
+</LinearLayout>
+

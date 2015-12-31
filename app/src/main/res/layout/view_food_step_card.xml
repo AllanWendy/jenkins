@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_bt_background_grep_side">
+
+    <ImageView
+        android:id="@+id/app_food_step_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@color/uikit_grey_dark"/>
+
+    <TextView
+        android:id="@+id/app_food_step_desc"
+        style="@style/UIKit.Font.Smaller.Dark"
+        android:layout_below="@id/app_food_step_image"
+        android:layout_alignLeft="@id/app_food_step_image"
+        android:layout_alignRight="@id/app_food_step_image"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="1dp"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:padding="@dimen/uikit_default_side_padding"
+        android:background="@color/uikit_white"
+        />
+
+    <TextView
+        android:id="@+id/app_food_step_desc_full"
+        style="@style/UIKit.Font.Smaller.Dark"
+        android:layout_alignTop="@+id/app_food_step_order"
+        android:layout_alignLeft="@id/app_food_step_image"
+        android:layout_alignRight="@id/app_food_step_image"
+        android:layout_alignBottom="@id/app_food_step_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:paddingTop="20dp"
+        android:paddingLeft="@dimen/uikit_default_side_padding"
+        android:paddingRight="@dimen/uikit_default_side_padding"
+        android:paddingBottom="@dimen/uikit_default_side_padding"
+        android:layout_marginBottom="1dp"
+        android:background="@color/uikit_white"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/app_food_step_order"
+        style="@style/UIKit.Font.Small.White"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="1dp"
+        android:background="@color/uikit_orange"
+        android:gravity="center"/>
+</RelativeLayout>

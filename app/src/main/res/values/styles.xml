@@ -1,0 +1,109 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@color/uikit_white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar" tools:ignore="NewApi">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+    <style name="AppTheme.Translucent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.Translucent.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.NoAnimation">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/uikit_slide_in_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/uikit_slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/uikit_slide_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/uikit_slide_out_right</item>
+    </style>
+
+    <style name="ActionBarTheme" parent="AppTheme" tools:ignore="NewApi">
+        <item name="android:actionOverflowButtonStyle">@style/CustomActionButtonOverflow</item>
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+        <item name="android:actionBarDivider">@null</item>
+    </style>
+
+    <style name="CustomActionBar" parent="@android:style/Widget.DeviceDefault.Light.ActionBar" tools:ignore="NewApi">
+        <item name="android:actionOverflowButtonStyle">@style/CustomActionButtonOverflow</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomActionButtonOverflow" parent="@android:style/Widget.DeviceDefault.Light.ActionButton.Overflow" tools:ignore="NewApi">
+        <item name="android:src">@android:drawable/dialog_holo_dark_frame</item>
+    </style>
+
+    <style name="Cover">
+        <item name="android:background">@drawable/app_cover</item>
+    </style>
+
+    <style name="AppTheme.Dialog" parent="Theme.AppCompat.DialogWhenLarge">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@color/uikit_white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar" tools:ignore="NewApi">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.Black">
+        <item name="android:windowBackground">@color/uikit_black</item>
+    </style>
+
+    <style name="AppTheme.CircleImageView">
+        <item name="android:src">@color/uikit_grey_light</item>
+        <item name="android:layout_width">@dimen/app_kitchen_item_width</item>
+        <item name="android:layout_height">@dimen/app_kitchen_item_height</item>
+        <item name="inStrokeWidth">@dimen/app_kitchen_item_in_stroke_width</item>
+        <item name="outStrokeWidth">@dimen/app_kitchen_item_out_stroke_width</item>
+        <item name="midStrokeWidth">@dimen/app_kitchen_item_mid_stroke_width</item>
+        <item name="inColor">@color/app_halo_cycle_in_grep</item>
+        <item name="outColor">@color/uikit_white</item>
+        <item name="midColor">@color/uikit_white</item>
+    </style>
+
+    <declare-styleable name="ClassifyView">
+        <attr name="flagShowImgs" format="boolean"/>
+        <attr name="flagShowLines" format="boolean"/>
+        <attr name="flagShowTexts" format="boolean"/>
+        <attr name="firstVisityItem" format="integer"/>
+    </declare-styleable>
+
+    <style name="AppTheme.NoAnimation.Translucent" parent="android:Theme.Translucent">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+
+    <style name="popwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/anim_dish_arrive_time_pop_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_dish_arrive_time_pop_out</item>
+    </style>
+
+
+</resources>

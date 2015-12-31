@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<com.wecook.uikit.widget.TitleBar
+    android:id="@+id/uikit_title_bar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/uikit_action_bar_default_height"
+    android:orientation="vertical">
+
+    <!-- 功能layer -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 导航组 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- 返回按钮 -->
+            <com.wecook.uikit.widget.CoveredImageView
+                android:id="@+id/uikit_title_bar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/uikit_bt_back_pressed"/>
+
+            <!-- 导航文本 -->
+            <com.wecook.uikit.widget.CoveredTextView
+                android:id="@+id/uikit_title_bar_back_title"
+                style="@style/UIKit.Font.Orange"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+
+        <!-- 功能区 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- 标题区 -->
+            <LinearLayout
+                android:id="@+id/uikit_title_bar_layer_main"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <!-- 主标题 -->
+                <TextView
+                    android:id="@+id/uikit_title_bar_title"
+                    style="@style/UIKit.Font.Big.Dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"/>
+
+                <!-- 副标题导航 -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <com.wecook.uikit.widget.indicator.TitlePageIndicator
+                        android:id="@+id/uikit_title_bar_title_indicator"
+                        style="@style/UIKit.Font.Small.Dark"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="10sp"
+                        android:visibility="gone"
+                        app:footerColor="@color/uikit_transparent"
+                        app:footerIndicatorStyle="none"
+                        app:selectedColor="@color/uikit_black"/>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!-- 搜索区 -->
+            <LinearLayout
+                android:id="@+id/uikit_title_bar_layer_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="10dp"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/uikit_default_side_margin"
+                    android:layout_marginTop="@dimen/uikit_default_side_margin"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/uikit_title_bar_input"
+                        style="@style/UIKit.Font.Dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/uikit_default_side_padding"
+                        android:background="@drawable/uikit_shape_rect_side_corners_grey"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="32dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="13dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="13dp"
+                        android:src="@drawable/uikit_icon_search"/>
+
+                    <ImageView
+                        android:id="@+id/uikit_title_bar_input_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:padding="@dimen/uikit_default_padding"
+                        android:src="@drawable/uikit_ic_clear"
+                        android:visibility="gone"/>
+                </FrameLayout>
+
+                <!-- 完成按钮 -->
+                <com.wecook.uikit.widget.CoveredTextView
+                    android:id="@+id/uikit_title_bar_search_action"
+                    style="@style/UIKit.Font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="@string/uikit_button_title_finish"
+                    android:textColor="@color/uikit_bt_orange_white_font"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- 动作组 -->
+        <LinearLayout
+            android:id="@+id/uikit_title_bar_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center_vertical"
+            android:minHeight="30dp"
+            android:orientation="horizontal">
+
+            <!-- 搜索按钮 -->
+            <com.wecook.uikit.widget.CoveredImageView
+                android:id="@+id/uikit_title_bar_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/uikit_default_margin"
+                android:padding="@dimen/uikit_default_padding"
+                android:src="@drawable/uikit_ic_food_search"
+                android:visibility="gone"/>
+            <!--购物车相关-->
+            <FrameLayout
+                android:id="@+id/uikit_title_bar_shopping_cart"
+                android:layout_width="55dp"
+                android:layout_height="@dimen/uikit_action_bar_default_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?android:selectableItemBackground"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/uikit_title_bar_shopping_cart_img"
+                    android:layout_width="18.9dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/uikit_ic_shop_cart_orange"/>
+
+                <TextView
+                    android:id="@+id/uikit_title_bar_shopping_cart_count"
+                    style="@style/UIKit.Font.Small.White"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/uikit_shape_cycle_orange_no_stroke"
+                    android:gravity="center"
+                    android:maxWidth="24dp"
+                    android:minHeight="14dp"
+                    android:minWidth="14dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="1"
+                    android:textSize="10sp"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+            <!--提示按钮-->
+            <FrameLayout
+                android:id="@+id/uikit_title_bar_remind_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/uikit_default_big_margin"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/uikit_title_bar_remind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/uikit_777"
+                    android:textSize="14sp"/>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/uikit_title_bar_div"
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_gravity="bottom"
+        android:background="@color/uikit_grey_dark"
+        android:visibility="visible"/>
+
+    <!-- 进度 -->
+    <com.wecook.uikit.widget.progressbar.SmoothProgressBar
+        android:id="@+id/uikit_title_bar_progressbar"
+        xmlns:uikit="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:indeterminate="true"
+        android:max="100"
+        android:visibility="gone"
+        uikit:spb_color="@color/uikit_orange"
+        uikit:spb_mirror_mode="false"
+        uikit:spb_progressiveStart_activated="true"
+        uikit:spb_progressiveStart_speed="1.5"
+        uikit:spb_progressiveStop_speed="3.4"
+        uikit:spb_reversed="false"
+        uikit:spb_sections_count="3"
+        uikit:spb_speed="2.0"
+        uikit:spb_stroke_separator_length="2dp"
+        uikit:spb_stroke_width="2dp"/>
+
+</com.wecook.uikit.widget.TitleBar>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/uikit_white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:paddingRight="@dimen/uikit_default_padding">
+
+        <LinearLayout
+            android:id="@+id/app_classify_ll1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_classify_iv_1"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/app_classify_tv_1"
+                style="@style/UIKit.Font.Classfy"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginTop="0dp"
+                android:text="荤菜"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/app_classify_ll2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_classify_iv_2"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="15dp"/>
+
+            <TextView
+                android:id="@+id/app_classify_tv_2"
+                style="@style/UIKit.Font.Classfy"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginTop="0dp"
+                android:text="素菜"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/app_classify_ll3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_classify_iv_3"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="15dp"/>
+
+            <TextView
+                android:id="@+id/app_classify_tv_3"
+                style="@style/UIKit.Font.Classfy"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginTop="0dp"
+                android:text="汤羹"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/app_classify_ll4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_classify_iv_4"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="15dp"/>
+
+            <TextView
+                android:id="@+id/app_classify_tv_4"
+                style="@style/UIKit.Font.Classfy"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginTop="0dp"
+                android:text="凉菜"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/app_classify_ll5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_classify_iv_5"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="10dp"
+                android:paddingTop="15dp"/>
+
+            <TextView
+                android:id="@+id/app_classify_tv_5"
+                style="@style/UIKit.Font.Classfy"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginTop="0dp"
+                android:text="烘培"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/view_recommend_classify_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:paddingRight="@dimen/uikit_default_padding"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/view_recommend_classify_line1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16.5dp"
+            android:paddingRight="16.5dp"
+            android:scaleType="fitXY"
+            android:src="@color/uikit_orange"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/view_recommend_classify_line2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16.5dp"
+            android:paddingRight="16.5dp"
+            android:scaleType="fitXY"
+            android:src="@color/uikit_orange"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/view_recommend_classify_line3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16.5dp"
+            android:paddingRight="16.5dp"
+            android:scaleType="fitXY"
+            android:src="@color/uikit_orange"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/view_recommend_classify_line4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16.5dp"
+            android:paddingRight="16.5dp"
+            android:scaleType="fitXY"
+            android:src="@color/uikit_orange"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/view_recommend_classify_line5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16.5dp"
+            android:paddingRight="16.5dp"
+            android:scaleType="fitXY"
+            android:src="@color/uikit_orange"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/dish_recommend_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <include
+            android:id="@+id/uikit_title_bar"
+            layout="@layout/uikit_view_title_bar" />
+
+
+        <FrameLayout
+            android:id="@+id/dish_recommend_dishshop_layout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/dish_classify_shop_img"
+                android:layout_width="18.9dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/app_ic_shop_cart_nobg" />
+
+            <TextView
+                android:id="@+id/dish_classify_shop_count"
+                style="@style/UIKit.Font.Small.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:background="@drawable/uikit_shape_cycle_orange_no_stroke"
+                android:gravity="center"
+                android:maxWidth="24dp"
+                android:minHeight="14dp"
+                android:minWidth="14dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+        <View
+            android:id="@+id/app_dish_recommend_line"
+            style="@style/UIKit.Line.Horizontal"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#e6e6e6" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.wecook.uikit.widget.pulltorefresh.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/dish_classify_list"
+            style="@style/UIKit.ListView.Common"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/uikit_pulltorefresh_bg"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrDrawable="@drawable/uikit_pull_refresh_flip"
+            ptr:ptrMode="both" />
+
+        <com.wecook.uikit.widget.EmptyView
+            android:id="@+id/uikit_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/uikit_grey_light"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/dishclassify_top_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/uikit_white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <include
+                android:id="@+id/app_dish_order_by"
+                layout="@layout/view_order_by_chooser" />
+
+            <View
+                style="@style/UIKit.Line.Horizontal"
+                android:layout_gravity="bottom" />
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

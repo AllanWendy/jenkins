@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/uikit_view_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/app_my_feature_suggestion_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/uikit_shape_rect_corners_white"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/app_my_feature_suggestion_content"
+                    style="@style/UIKit.Font.Dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="请留下您的宝贵建议，我们将在24小时内进行处理"
+                    android:padding="15dp"
+                    android:singleLine="false" />
+
+                <View
+                    style="@style/UIKit.Line.Horizontal"
+                    android:layout_height="1dp" />
+
+                <EditText
+                    android:id="@+id/app_my_feature_suggestion_phonenum"
+                    style="@style/UIKit.Font.Dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:hint="请输入您的电话号码，方便我们与您联系"
+                    android:inputType="phone"
+                    android:padding="15dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/app_my_feature_suggestion_commit"
+                style="@style/UIKit.Font.Huge.Dark"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/app_bt_bg_orange_white"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/uikit_bt_default_font_white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey_light">
+
+    <include layout="@layout/uikit_view_title_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.wecook.uikit.widget.shape.CircleImageView
+            android:id="@+id/app_user_profile_avatar"
+            android:layout_width="@dimen/app_user_profile_avatar_width"
+            android:layout_height="@dimen/app_user_profile_avatar_height"
+            android:layout_marginTop="@dimen/uikit_default_padding"
+            android:layout_marginBottom="@dimen/uikit_default_padding"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <View style="@style/UIKit.Line.Horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_user_profile_item_height"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:background="@color/uikit_white">
+
+        <TextView
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_user_profile_label_nickname" />
+
+        <TextView
+            android:id="@+id/app_user_profile_nickname"
+            style="@style/UIKit.Font"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/app_user_profile_item_padding" />
+
+        <EditText
+            android:id="@+id/app_user_profile_nickname_edit"
+            style="@style/UIKit.Font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:background="@null"
+            android:layout_marginLeft="@dimen/app_user_profile_item_padding"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_marginLeft="@dimen/uikit_default_margin" />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_user_profile_item_height"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:background="@color/uikit_white">
+
+        <TextView
+            style="@style/UIKit.Font.Dark"
+            android:id="@+id/app_user_profile_label_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/app_user_profile_item_padding"
+            android:layout_centerVertical="true"
+            android:text="@string/app_user_profile_label_gender" />
+
+        <TextView
+            android:id="@+id/app_user_profile_girl"
+            style="@style/UIKit.Font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_gender_girl"
+            android:paddingTop="@dimen/uikit_default_side_padding"
+            android:paddingBottom="@dimen/uikit_default_side_padding"
+            android:paddingLeft="@dimen/app_user_profile_gender_padding"
+            android:paddingRight="@dimen/app_user_profile_gender_padding"
+            android:layout_toRightOf="@id/app_user_profile_label_gender"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/uikit_default_margin"
+            android:textColor="@color/uikit_white"
+            android:background="@drawable/app_bt_girl"/>
+
+        <TextView
+            android:id="@+id/app_user_profile_boy"
+            style="@style/UIKit.Font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="@string/app_gender_boy"
+            android:paddingTop="@dimen/uikit_default_side_padding"
+            android:paddingBottom="@dimen/uikit_default_side_padding"
+            android:paddingLeft="@dimen/app_user_profile_gender_padding"
+            android:paddingRight="@dimen/app_user_profile_gender_padding"
+            android:textColor="@color/uikit_black"
+            android:layout_toRightOf="@id/app_user_profile_girl"
+            android:background="@drawable/app_bt_boy"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_marginLeft="@dimen/uikit_default_margin" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_user_profile_item_height"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:background="@color/uikit_white">
+
+        <TextView
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_user_profile_label_birthday" />
+
+        <TextView
+            android:id="@+id/app_user_profile_birthday"
+            style="@style/UIKit.Font"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/app_user_profile_item_padding" />
+
+    </LinearLayout>
+    <View
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_marginLeft="@dimen/uikit_default_margin" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_user_profile_item_height"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:background="@color/uikit_white">
+
+        <TextView
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_user_profile_label_city" />
+
+        <TextView
+            android:id="@+id/app_user_profile_city"
+            style="@style/UIKit.Font"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/app_user_profile_item_padding" />
+
+    </LinearLayout>
+
+    <View style="@style/UIKit.Line.Horizontal" />
+
+</LinearLayout>

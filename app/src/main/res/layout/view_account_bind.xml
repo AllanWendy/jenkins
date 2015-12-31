@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="@dimen/app_my_feature_item_height"
+    android:background="@drawable/app_item_background">
+
+    <ImageView
+        android:id="@+id/app_my_feature_icon"
+        android:layout_width="@dimen/app_my_feature_item_icon_width"
+        android:layout_height="@dimen/app_my_feature_item_icon_height"
+        android:scaleType="centerInside"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/app_item_background" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/app_item_background">
+
+        <TextView
+            style="@style/UIKit.Font.Dark"
+            android:id="@+id/app_my_feature_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/uikit_default_side_padding"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <com.wecook.uikit.widget.SwitchButton
+        android:id="@+id/app_my_feature_switch_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:frameDrawable="@drawable/switch_frame"
+        app:stateDrawable="@drawable/uikit_bg_switch"
+        app:stateMaskDrawable="@drawable/switch_state_mask"
+        app:sliderDrawable="@drawable/switch_slider_normal"/>
+
+</LinearLayout>

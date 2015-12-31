@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/choose_time_img"
+        style="@style/UIKit.ImageView"
+        android:layout_width="38.5dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/uikit_default_big_margin"
+        android:layout_marginLeft="@dimen/uikit_default_big_margin"
+        android:layout_marginTop="@dimen/uikit_default_big_margin"
+        android:scaleType="fitXY"
+        android:src="@drawable/app_ic_arrive_time_all"/>
+
+    <TextView
+        android:id="@+id/choose_time_text"
+        style="@style/UIKit.Font"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="15dp"
+        android:text="全部"
+        android:textColor="@color/uikit_777"
+        android:textSize="@dimen/uikit_default_font_normal_small"/>
+
+    <ImageView
+        android:id="@+id/choose_time_state_img"
+        style="@style/UIKit.ImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/uikit_default_big_margin"
+        android:scaleType="fitXY"
+        android:src="@drawable/app_ic_choose_img"
+        android:visibility="gone"/>
+
+</LinearLayout>

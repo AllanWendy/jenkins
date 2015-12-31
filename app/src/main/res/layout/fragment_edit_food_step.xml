@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey_light">
+
+    <!-- 标题 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/uikit_default_padding">
+
+        <TextView
+            style="@style/UIKit.Font.Big.Dark"
+            android:id="@+id/app_food_publish_step_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/app_food_publish_step_sub_title"
+            style="@style/UIKit.Font.Small"
+            android:layout_below="@id/app_food_publish_step_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uikit_default_padding"
+            android:drawablePadding="@dimen/uikit_default_drawable_padding"
+            android:gravity="center"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <com.wecook.uikit.widget.viewpage.MultiPageContainer
+        android:id="@+id/app_food_publish_step_pages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- 底部动作 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/app_food_publish_step_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/uikit_default_padding"
+            android:src="@drawable/app_ic_delete_step"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/app_food_publish_step_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/uikit_default_padding"
+            android:src="@drawable/app_ic_close_step_list"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+            android:id="@+id/app_food_publish_step_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/uikit_default_padding"
+            android:src="@drawable/app_ic_insert_step"
+            android:layout_gravity="right"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout
+    android:id="@+id/register_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey"
+    android:orientation="vertical">
+
+    <include layout="@layout/uikit_view_title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/app_register_side_margin"
+        android:layout_marginRight="@dimen/app_register_side_margin"
+        android:layout_marginTop="@dimen/app_register_side_margin"
+        android:background="@drawable/uikit_shape_rect_side_small_corners_grey">
+
+        <EditText
+            android:id="@+id/app_register_account_phone"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_user_input_height"
+            android:background="@null"
+            android:drawableLeft="@drawable/app_icon_longin_phone"
+            android:hint="@string/app_register_account_name_hint_phone"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/uikit_default_big_margin"
+            android:textColorHint="@color/uikit_font_grep_light"/>
+
+        <View
+            android:id="@+id/div_1"
+            style="@style/UIKit.Line.Horizontal"
+            android:layout_below="@id/app_register_account_phone"
+            android:layout_marginLeft="@dimen/uikit_default_big_margin"/>
+
+
+        <EditText
+            android:id="@+id/app_register_account_verity"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_user_input_height"
+            android:layout_below="@id/div_1"
+            android:background="@null"
+            android:drawableLeft="@drawable/app_icon_longin_code"
+            android:hint="@string/app_register_account_verity_hint"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingLeft="@dimen/uikit_default_big_margin"
+            android:textColorHint="@color/uikit_font_grep_light"/>
+
+        <View
+            android:id="@+id/div_2"
+            style="@style/UIKit.Line.Horizontal"
+            android:layout_below="@id/app_register_account_verity"
+            android:layout_marginLeft="@dimen/uikit_default_big_margin"/>
+
+        <EditText
+            android:id="@+id/app_register_account_password"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_user_input_height"
+            android:layout_below="@id/div_2"
+            android:background="@null"
+            android:drawableLeft="@drawable/app_icon_longin_pswd"
+            android:hint="@string/app_register_account_password_hint"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/uikit_default_big_margin"
+            android:textColorHint="@color/uikit_font_grep_light"/>
+
+
+        <View
+            android:id="@+id/div_4"
+            style="@style/UIKit.Line.Horizontal"
+            android:layout_below="@id/app_register_account_password"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/app_register_account_phone_tip"
+            style="@style/UIKit.Font.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_register_account_verity"
+            android:layout_alignRight="@id/app_register_account_phone"
+            android:layout_alignTop="@id/app_register_account_verity"
+            android:layout_marginBottom="@dimen/uikit_default_margin"
+            android:layout_marginRight="@dimen/uikit_default_big_margin"
+            android:layout_marginTop="@dimen/uikit_default_margin"
+            android:background="@drawable/app_bt_bg_white_orange"
+            android:gravity="center"
+            android:paddingLeft="@dimen/uikit_default_padding"
+            android:paddingRight="@dimen/uikit_default_padding"
+            android:text="@string/app_register_phone_get_verity"
+            android:textColor="@color/uikit_bt_orange_white_font"
+            android:textSize="@dimen/uikit_default_font_small"/>
+
+        <com.wecook.uikit.widget.CoveredImageView
+            android:id="@+id/app_register_account_phone_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_register_account_phone"
+            android:layout_alignRight="@id/app_register_account_phone"
+            android:layout_alignTop="@id/app_register_account_phone"
+            android:paddingLeft="@dimen/uikit_default_padding"
+            android:paddingRight="@dimen/uikit_default_padding"
+            android:src="@drawable/uikit_ic_clear"
+            android:visibility="gone"/>
+
+        <com.wecook.uikit.widget.CoveredImageView
+            android:id="@+id/app_register_account_verity_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_register_account_verity"
+            android:layout_alignTop="@id/app_register_account_verity"
+            android:layout_toLeftOf="@id/app_register_account_phone_tip"
+            android:paddingLeft="@dimen/uikit_default_padding"
+            android:paddingRight="@dimen/uikit_default_padding"
+            android:src="@drawable/uikit_ic_clear"
+            android:visibility="gone"/>
+
+        <com.wecook.uikit.widget.CoveredImageView
+            android:id="@+id/app_register_account_password_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_register_account_password"
+            android:layout_alignRight="@id/app_register_account_password"
+            android:layout_alignTop="@id/app_register_account_password"
+            android:paddingLeft="@dimen/uikit_default_padding"
+            android:paddingRight="@dimen/uikit_default_padding"
+            android:src="@drawable/uikit_ic_clear"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/uikit_default_big_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/app_register_voice_verity"
+            style="@style/UIKit.Font.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/app_register_side_margin"
+            android:layout_marginRight="@dimen/app_register_side_margin"
+            android:gravity="center_horizontal"
+            android:text="收不到验证码？试试语音验证码" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/app_register_button_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_user_button_height"
+        android:layout_marginBottom="@dimen/app_register_side_margin"
+        android:layout_marginLeft="@dimen/app_register_side_margin"
+        android:layout_marginRight="@dimen/app_register_side_margin"
+        android:layout_marginTop="@dimen/app_register_side_margin"
+        android:background="@drawable/app_bt_bg_orange_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/app_register_button_do"
+            style="@style/UIKit.Font.Big"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_button_title_register_and_login"
+            android:textColor="@color/uikit_bt_white_orange_font"/>
+
+        <com.wecook.uikit.widget.progressbar.CircularProgressBar
+            android:id="@+id/app_register_waiting"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="@dimen/app_loading_width"
+            android:layout_height="@dimen/app_loading_width"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:cpb_color="@color/uikit_white"
+            app:cpb_stroke_width="2dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/app_register_server_tip"
+            style="@style/UIKit.Font.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/app_register_side_margin"
+            android:layout_marginRight="@dimen/app_register_side_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/app_register_server" />
+
+    </FrameLayout>
+</LinearLayout>

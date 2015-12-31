@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<resources>
+    <array name="app_default_tags">
+        <item>@string/app_recommend_default_tag_staple</item>
+        <item>@string/app_recommend_default_tag_western</item>
+        <item>@string/app_recommend_default_tag_children</item>
+        <item>@string/app_recommend_default_tag_rightnow</item>
+    </array>
+
+    <array name="app_home_items_square_name">
+        <item>@string/app_home_item_message</item>
+        <item>@string/app_home_item_fav</item>
+        <item>@string/app_home_item_upload</item>
+        <item>@string/app_home_item_recipe</item>
+    </array>
+
+    <array name="app_home_items_name">
+        <item>@string/app_home_item_wallet</item>
+        <!--<item>@string/app_home_item_coupon</item>-->
+        <item>@string/app_home_item_gain_coupon</item>
+        <item>@string/app_home_item_order</item>
+        <item>@string/app_home_item_call</item>
+    </array>
+
+    <array name="app_home_items_order_name">
+        <item>@string/app_home_item_order_obligation</item>
+        <item>@string/app_home_item_order_no_deliver</item>
+        <item>@string/app_home_item_order_no_evaluate</item>
+        <item>@string/app_home_item_order_refund</item>
+    </array>
+
+    <array name="app_kitchen_home_items_name">
+        <item>@string/app_kitchen_home_item_ingredient</item>
+        <item>@string/app_kitchen_home_item_condiment</item>
+        <item>@string/app_kitchen_home_item_wave</item>
+        <item>@string/app_kitchen_home_item_barcode</item>
+    </array>
+
+    <array name="app_setting_items_name">
+        <item>@string/app_setting_item_update_pwd</item>
+        <item>@string/app_setting_item_unbind_phone</item>
+        <item>@string/app_setting_item_bind_phone</item>
+        <item>@string/app_setting_item_share_app</item>
+        <item>@string/app_setting_item_feedback</item>
+        <item>@string/app_setting_item_yummy</item>
+        <item>@string/app_setting_item_clear_cache</item>
+        <item>@string/app_setting_item_push</item>
+        <item>@string/app_setting_item_about</item>
+        <item>@string/app_setting_item_address</item>
+        <item>@string/app_setting_item_check_upd</item>
+        <item>@string/app_setting_item_provisions</item>
+    </array>
+
+    <array name="app_account_bind_item_name">
+        <item>@string/app_account_bind_item_weixin</item>
+        <item>@string/app_account_bind_item_qq</item>
+        <item>@string/app_account_bind_item_weibo</item>
+    </array>
+
+</resources>

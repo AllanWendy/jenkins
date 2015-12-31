@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/uikit_default_margin"
+    android:paddingRight="@dimen/uikit_default_margin"
+    android:paddingTop="@dimen/uikit_default_margin">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_shape_coupon">
+
+        <ImageView
+            android:id="@+id/app_coupon_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="@dimen/uikit_default_big_margin"
+            android:background="@drawable/app_pic_coupon_grey_wecook"/>
+
+
+        <View
+            android:id="@+id/app_coupon_left_div"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"/>
+
+        <View
+            android:id="@+id/app_coupon_right_div"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:rotation="180"/>
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_gravity="left|top"
+            android:background="@drawable/app_pic_coupon_div_corner"/>
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_gravity="right|top"
+            android:background="@drawable/app_pic_coupon_div_corner"
+            android:rotation="90"/>
+
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_gravity="right|bottom"
+            android:background="@drawable/app_pic_coupon_div_corner"
+            android:rotation="180"/>
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_gravity="left|bottom"
+            android:background="@drawable/app_pic_coupon_div_corner"
+            android:rotation="270"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.618"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/app_coupon_money_logo"
+                style="@style/UIKit.Font.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/uikit_default_space_margin"
+                android:padding="0dp"
+                android:text="￥"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/app_coupon_money"
+                style="@style/UIKit.Font.Biggest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="30"
+                android:textSize="50sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/uikit_default_space_margin"
+            android:layout_marginTop="@dimen/uikit_default_space_margin"
+            android:background="@drawable/app_pic_coupon_grey_line"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/app_coupon_title"
+                style="@style/UIKit.Font.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满40元可用"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/app_coupon_subtitle"
+                style="@style/UIKit.Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="有效期至 2015.09.27"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <!--###########################################################################################-->
+    <!--                                     PullToZoom                                            -->
+    <!--###########################################################################################-->
+
+    <declare-styleable name="PullToZoomScrollView">
+        <attr name="scrollHeadView" format="reference" />
+        <attr name="scrollContentView" format="reference" />
+        <attr name="scrollZoomView" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PullToZoomListView">
+        <attr name="listHeadView" format="reference" />
+        <attr name="listHeadOperatorView" format="reference" />
+        <attr name="ratio" format="float" />
+        <attr name="isHeadParallax" format="boolean" />
+    </declare-styleable>
+
+    <!--###########################################################################################-->
+    <!--                                     HorizontalList                                        -->
+    <!--###########################################################################################-->
+
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <!--###########################################################################################-->
+    <!--                                     Shape                                                 -->
+    <!--###########################################################################################-->
+    <declare-styleable name="CustomShapeImageView">
+        <attr name="shape" format="integer">
+            <enum name="circle" value="1" />
+            <enum name="rectangle" value="2" />
+            <enum name="svg" value="3" />
+        </attr>
+
+        <attr name="svg_raw_resource" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="HaloCircleImageView">
+        <attr name="foregroundColor" format="reference|color" />
+        <attr name="inColor" format="reference|color" />
+        <attr name="outColor" format="reference|color" />
+        <attr name="midColor" format="reference|color" />
+        <attr name="inStrokeWidth" format="reference|dimension|float" />
+        <attr name="outStrokeWidth" format="reference|dimension|float" />
+        <attr name="midStrokeWidth" format="reference|dimension|float" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="frameDrawable" format="reference|color"/>
+        <attr name="stateDrawable" format="reference|color"/>
+        <attr name="stateMaskDrawable" format="reference|color"/>
+        <attr name="sliderDrawable" format="reference|color"/>
+        <attr name="withTextInterval" format="dimension"/>
+    </declare-styleable>
+</resources>

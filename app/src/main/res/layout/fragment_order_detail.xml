@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/uikit_white"
+              android:orientation="vertical">
+
+    <include layout="@layout/uikit_view_title_bar"/>
+
+    <include
+        android:id="@+id/app_dish_order_tab_view"
+        layout="@layout/view_dish_order_tab"/>
+
+    <com.wecook.uikit.widget.EmptyView
+        android:id="@+id/uikit_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/uikit_grey_light"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.wecook.uikit.widget.pulltorefresh.PullToRefreshListView
+            android:id="@+id/uikit_listview"
+            style="@style/UIKit.ListView.Common"
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/uikit_grey"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrDrawable="@drawable/uikit_pull_refresh_flip"
+            ptr:ptrMode="pullFromStart"/>
+
+        <ImageView
+            android:id="@+id/app_order_detail_red_packet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/app_pic_red_packet"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <View style="@style/UIKit.Line.Horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/app_order_detail_action_wait_pay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                style="@style/UIKit.Font.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实付："/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/app_order_detail_total"
+                    style="@style/UIKit.Font.Huge.Orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="100dp"
+                    android:text="¥0.00"/>
+
+                <!--<TextView-->
+                <!--android:id="@+id/app_order_detail_coupon"-->
+                <!--style="@style/UIKit.Font.Small.Dark"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="(优惠卷)" />-->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/app_order_detail_action_cancel"
+                style="@style/UIKit.Font.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/app_bt_side_orange_white"
+                android:paddingBottom="8dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="8dp"
+                android:text="取消订单"
+                android:textColor="@color/uikit_bt_orange_white_font"/>
+
+            <TextView
+                android:id="@+id/app_order_detail_action_pay"
+                style="@style/UIKit.Font.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/app_bt_bg_orange_white"
+                android:paddingBottom="8dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="8dp"
+                android:text="去付款"
+                android:textColor="@color/uikit_bt_white_orange_font"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/app_order_detail_action_state"
+        style="@style/UIKit.Font.White"
+        android:layout_width="84dp"
+        android:layout_height="32dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/app_bt_bg_orange_white"
+        android:gravity="center"
+        android:text="确认收货"
+        android:textColor="@color/uikit_bt_white_orange_font"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/app_order_detail_action_detail"
+        style="@style/UIKit.Font.Big.White"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/uikit_orange"
+        android:gravity="center"
+        android:text="再下一单"
+        android:visibility="gone"/>
+
+</LinearLayout>

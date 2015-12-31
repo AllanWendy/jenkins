@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Actionbar -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/uikit_action_bar_default_height">
+
+
+    <TextView
+        android:id="@+id/dish_recommend_location_btn"
+        style="@style/UIKit.Font"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/app_ic_down_arrow_home"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="北京"
+        android:textColor="@color/uikit_red"
+        android:textSize="14sp"/>
+
+    <FrameLayout
+        android:id="@+id/dish_recommend_dishshop_layout"
+        android:layout_width="36.8dp"
+        android:layout_height="@dimen/uikit_action_bar_default_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp">
+
+        <ImageView
+            android:id="@+id/dish_recommend_shop_img"
+            android:layout_width="18.9dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/app_ic_shop_cart_nobg"/>
+
+        <TextView
+            android:id="@+id/dish_recommend_shop_count"
+            style="@style/UIKit.Font.Small.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/uikit_shape_cycle_orange_no_stroke"
+            android:gravity="center"
+            android:maxWidth="24dp"
+            android:minHeight="14dp"
+            android:minWidth="14dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/dish_recommend_zxing_layout"
+        android:layout_width="33dp"
+        android:layout_height="@dimen/uikit_action_bar_default_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="40dp">
+
+        <ImageView
+            android:id="@+id/dish_recommend_zxing_img"
+            android:layout_width="18.9dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/app_ic_zxing_home_white"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/dish_recommend_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/uikit_default_side_margin"
+        android:layout_marginTop="@dimen/uikit_default_side_margin"
+        android:layout_toLeftOf="@+id/dish_recommend_dishshop_layout"
+        android:layout_toRightOf="@+id/dish_recommend_location_btn">
+
+        <TextView
+            android:id="@+id/uikit_title_bar_input"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/uikit_default_side_padding"
+            android:background="@drawable/app_shape_rect_side_corners_grey"
+            android:hint="搜索您想吃的菜"
+            android:paddingBottom="5dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textColorHint="#aaaaaa"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13dp"
+            android:src="@drawable/uikit_icon_search"/>
+
+        <ImageView
+            android:id="@+id/uikit_title_bar_input_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:padding="@dimen/uikit_default_padding"
+            android:src="@drawable/uikit_ic_clear"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/app_dish_recommend_line"
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/uikit_font_grep_light"/>
+</RelativeLayout>

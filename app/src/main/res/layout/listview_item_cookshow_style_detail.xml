@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<cn.wecook.app.main.recommend.detail.cookshow.CookShowScoreView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/uikit_white">
+
+    <!--作者栏-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_cook_show_author_height">
+
+        <com.wecook.uikit.widget.shape.CircleImageView
+            android:id="@+id/app_cook_show_author_avatar"
+            android:layout_width="@dimen/app_cook_show_author_avatar_size"
+            android:layout_height="@dimen/app_cook_show_author_avatar_size"
+            android:layout_margin="@dimen/app_cook_show_side_padding"
+            android:src="@drawable/app_pic_default_avatar"/>
+
+        <TextView
+            style="@style/UIKit.Font.Big.Dark"
+            android:id="@+id/app_cook_show_item_author_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            style="@style/UIKit.Font.Brown"
+            android:id="@+id/app_cook_show_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="@dimen/uikit_default_drawable_padding"
+            android:drawableLeft="@drawable/app_ic_clock"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/app_cook_show_side_padding"/>
+    </LinearLayout>
+
+    <!--菜谱栏-->
+    <RelativeLayout
+        android:id="@+id/app_cook_show_item_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            style="@style/UIKit.ImageView"
+            android:id="@+id/app_cook_show_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/app_cook_show_show_score_layout"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_cook_show_item_image"
+            android:layout_alignRight="@id/app_cook_show_item_image"
+            android:layout_marginRight="@dimen/app_cook_show_side_padding"
+            android:layout_marginBottom="@dimen/app_cook_show_side_padding">
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_item_anim_start_image"
+                android:layout_width="@dimen/app_cook_show_score_size"
+                android:layout_height="@dimen/app_cook_show_score_size"
+                android:src="@color/app_cook_show_score_five"/>
+
+            <TextView
+                style="@style/UIKit.Font.White"
+                android:id="@+id/app_cook_show_item_score_show"
+                android:layout_width="@dimen/app_cook_show_score_size"
+                android:layout_height="@dimen/app_cook_show_score_size"
+                android:text="@string/app_cook_show_score_five"
+                android:singleLine="false"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/app_cook_show_item_do_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/app_ic_score_more"
+                android:layout_gravity="bottom|right"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/app_cook_show_item_anim_group_layout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/app_cook_show_item_image"
+            android:layout_alignBottom="@id/app_cook_show_item_image"
+            android:layout_marginBottom="@dimen/app_cook_show_side_padding"
+            android:gravity="bottom|center_horizontal"
+            android:layout_gravity="bottom"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/app_cook_show_score_one_layout"
+                android:layout_width="@dimen/app_cook_show_score_size"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/app_cook_show_side_padding"
+                android:layout_marginRight="@dimen/app_cook_show_side_padding">
+
+                <ImageView
+                    android:id="@+id/app_cook_show_item_score_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_pic_score_one"
+                    android:layout_marginBottom="@dimen/uikit_default_padding"/>
+
+                <com.wecook.uikit.widget.shape.CircleImageView
+                    android:id="@+id/app_cook_show_item_anim_score_one"
+                    android:layout_below="@+id/app_cook_show_item_score_one"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:src="@color/app_cook_show_score_one"/>
+
+                <TextView
+                    style="@style/UIKit.Font.White"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:layout_alignTop="@+id/app_cook_show_item_anim_score_one"
+                    android:layout_alignLeft="@+id/app_cook_show_item_anim_score_one"
+                    android:text="@string/app_cook_show_score_one"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/app_cook_show_score_two_layout"
+                android:layout_width="@dimen/app_cook_show_score_size"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_cook_show_side_padding">
+
+                <ImageView
+                    android:id="@+id/app_cook_show_item_score_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_pic_score_two"
+                    android:layout_marginBottom="@dimen/uikit_default_padding"/>
+
+                <com.wecook.uikit.widget.shape.CircleImageView
+                    android:layout_below="@+id/app_cook_show_item_score_two"
+                    android:id="@+id/app_cook_show_item_anim_score_two"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:src="@color/app_cook_show_score_two"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    style="@style/UIKit.Font.White"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:layout_alignTop="@+id/app_cook_show_item_anim_score_two"
+                    android:layout_alignLeft="@+id/app_cook_show_item_anim_score_two"
+                    android:text="@string/app_cook_show_score_two"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/app_cook_show_score_three_layout"
+                android:layout_width="@dimen/app_cook_show_score_size"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_cook_show_side_padding">
+
+                <ImageView
+                    android:id="@+id/app_cook_show_item_score_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_pic_score_three"
+                    android:layout_marginBottom="@dimen/uikit_default_padding"/>
+
+                <com.wecook.uikit.widget.shape.CircleImageView
+                    android:layout_below="@+id/app_cook_show_item_score_three"
+                    android:id="@+id/app_cook_show_item_anim_score_three"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:src="@color/app_cook_show_score_three"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    style="@style/UIKit.Font.White"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:layout_alignTop="@+id/app_cook_show_item_anim_score_three"
+                    android:layout_alignLeft="@+id/app_cook_show_item_anim_score_three"
+                    android:text="@string/app_cook_show_score_three"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/app_cook_show_score_four_layout"
+                android:layout_width="@dimen/app_cook_show_score_size"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_cook_show_side_padding">
+
+                <ImageView
+                    android:id="@+id/app_cook_show_item_score_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_pic_score_four"
+                    android:layout_marginBottom="@dimen/uikit_default_padding"/>
+
+                <com.wecook.uikit.widget.shape.CircleImageView
+                    android:layout_below="@+id/app_cook_show_item_score_four"
+                    android:id="@+id/app_cook_show_item_anim_score_four"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:src="@color/app_cook_show_score_four"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    style="@style/UIKit.Font.White"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:layout_alignTop="@+id/app_cook_show_item_anim_score_four"
+                    android:layout_alignLeft="@+id/app_cook_show_item_anim_score_four"
+                    android:text="@string/app_cook_show_score_four"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/app_cook_show_score_five_layout"
+                android:layout_width="@dimen/app_cook_show_score_size"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/app_cook_show_side_padding">
+
+                <ImageView
+                    android:id="@+id/app_cook_show_item_score_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_pic_score_five"
+                    android:layout_marginBottom="@dimen/uikit_default_padding"/>
+
+                <com.wecook.uikit.widget.shape.CircleImageView
+                    android:layout_below="@+id/app_cook_show_item_score_five"
+                    android:id="@+id/app_cook_show_item_anim_score_five"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:src="@color/app_cook_show_score_five"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    style="@style/UIKit.Font.White"
+                    android:layout_width="@dimen/app_cook_show_score_size"
+                    android:layout_height="@dimen/app_cook_show_score_size"
+                    android:layout_alignTop="@+id/app_cook_show_item_anim_score_five"
+                    android:layout_alignLeft="@+id/app_cook_show_item_anim_score_five"
+                    android:text="@string/app_cook_show_score_five"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--描述栏-->
+    <RelativeLayout
+        android:id="@+id/app_cook_show_item_desc_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_cook_show_side_padding"
+        android:paddingLeft="@dimen/app_cook_show_side_padding"
+        android:paddingRight="@dimen/app_cook_show_side_padding">
+
+        <LinearLayout
+            android:id="@+id/app_cook_show_item_recipe_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/UIKit.Font.Huge.Dark"
+                android:id="@+id/app_cook_show_item_recipe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"/>
+
+            <TextView
+                style="@style/UIKit.Font.Brown"
+                android:id="@+id/app_cook_show_item_recipe_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/app_cook_show_side_padding"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/UIKit.Font"
+            android:id="@+id/app_cook_show_item_recipe_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_cook_show_item_recipe_group"
+            android:singleLine="false"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/uikit_default_padding"
+            />
+    </RelativeLayout>
+
+    <!--评论栏-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:padding="@dimen/app_cook_show_side_padding">
+
+        <!--打分展示栏-->
+        <RelativeLayout
+            android:id="@+id/app_cook_show_item_score_users"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/app_cook_show_author_avatar_size"
+            android:paddingRight="@dimen/app_cook_show_side_padding">
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar1"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"/>
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar2"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/app_cook_show_score_avatar1"/>
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar3"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/app_cook_show_score_avatar2"/>
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar4"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/app_cook_show_score_avatar3"/>
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar5"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/app_cook_show_score_avatar4"/>
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar6"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/app_cook_show_score_avatar5"/>
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar7"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/app_cook_show_score_avatar6"/>
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar8"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/app_cook_show_score_avatar7"/>
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar9"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/app_cook_show_score_avatar8"/>
+
+            <com.wecook.uikit.widget.shape.CircleImageView
+                android:id="@+id/app_cook_show_score_avatar10"
+                android:layout_width="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_height="@dimen/app_cook_show_score_author_avatar_size"
+                android:layout_marginRight="@dimen/app_cook_show_score_author_side_padding"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/app_cook_show_score_avatar9"/>
+
+            <TextView
+                style="@style/UIKit.Font.Brown"
+                android:id="@+id/app_cook_show_score_number"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:background="@color/uikit_white"
+                android:text="@string/app_cook_show_praise_default_number"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/app_cook_show_action_div1"
+            style="@style/UIKit.Line.Vertical"
+            android:layout_marginTop="@dimen/uikit_default_side_padding"
+            android:layout_marginRight="@dimen/app_cook_show_side_padding"/>
+
+        <TextView
+            style="@style/UIKit.Font.Orange"
+            android:id="@+id/app_cook_show_item_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/app_cook_show_operator_size"
+            android:drawableLeft="@drawable/app_bt_comment_big_pressed"
+            android:layout_marginRight="@dimen/app_cook_show_side_padding"
+            android:gravity="center"/>
+
+        <View
+            android:id="@+id/app_cook_show_action_div2"
+            style="@style/UIKit.Line.Vertical"
+            android:layout_marginTop="@dimen/uikit_default_side_padding"
+            android:layout_marginRight="@dimen/app_cook_show_side_padding"/>
+
+        <ImageView
+            android:id="@+id/app_cook_show_item_share"
+            android:layout_width="@dimen/app_cook_show_operator_size"
+            android:layout_height="@dimen/app_cook_show_operator_size"
+            android:src="@drawable/app_bt_share_big_pressed"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/app_cook_show_end_div"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/uikit_default_padding"
+        android:background="@drawable/uikit_shape_rect_fill_grep_side_grey_dark"/>
+
+</cn.wecook.app.main.recommend.detail.cookshow.CookShowScoreView>

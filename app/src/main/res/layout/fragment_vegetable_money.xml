@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey"
+    android:orientation="vertical">
+
+    <include layout="@layout/uikit_view_title_bar"/>
+
+    <LinearLayout
+        android:id="@+id/app_vegetable_money_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uikit_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="35dp">
+
+        <ImageView
+            android:id="@+id/app_vegetable_money_icon"
+            style="@style/UIKit.ImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_ic_vegetablemoney_icon"/>
+
+        <TextView
+            android:id="@+id/app_vegetable_money_count"
+            style="@style/UIKit.Font.Biggest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uikit_default_big_margin"
+            android:gravity="center"
+            android:textColor="@color/uikit_333"/>
+
+        <TextView
+            android:id="@+id/app_vegetable_money_payment_detail"
+            style="@style/UIKit.Font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uikit_default_big_margin"
+            android:drawableLeft="@drawable/app_ic_remind"
+            android:gravity="center"
+            android:padding="@dimen/uikit_default_padding_mid"
+            android:text="收支明细"
+            android:textColor="@color/uikit_aaa"
+            android:textSize="@dimen/uikit_default_font_normal_small"/>
+    </LinearLayout>
+
+    <View
+        style="@style/UIKit.Line.Horizontal"/>
+</LinearLayout>

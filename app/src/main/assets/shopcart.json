@@ -1,0 +1,90 @@
+[
+  {
+    "restaurant_id": 8,
+    "status": "1",
+    "title": "家常菜品",
+    "delivery_delay": "2880",
+    "delivery_price": "5.0",
+    "provide_max": 835,
+    "dishes": [
+      {
+        "cart_id": 721,
+        "dish_id": 581,
+        "title": "回锅肉",
+        "price": 0.01,
+        "stock": 168,
+        "quantity": 100,
+        "image": "http://u1.wecook.cn/images/20150426/553cc047b7594.jpg-r30",
+        "image_big": "http://u1.wecook.cn/images/20150426/553cc047b7594.jpg-r64",
+        "status": "1"
+      },
+      {
+        "cart_id": 723,
+        "dish_id": 583,
+        "title": "手撕包菜",
+        "price": 7.9,
+        "stock": 497,
+        "quantity": 10,
+        "image": "http://u1.wecook.cn/images/20150426/553cc34a5c596.jpg-r30",
+        "image_big": "http://u1.wecook.cn/images/20150426/553cc34a5c596.jpg-r64",
+        "status": "-3"
+      },
+      {
+        "cart_id": 722,
+        "dish_id": 596,
+        "title": "小炒腊肉（促销）",
+        "price": 1,
+        "stock": 99,
+        "quantity": 2,
+        "image": "http://u1.wecook.cn/images/20150512/55518b783f2a8.jpeg-r30",
+        "image_big": "http://u1.wecook.cn/images/20150512/55518b783f2a8.jpeg-r64",
+        "price_normal": 15,
+        "status": "1"
+      }
+    ]
+  },
+  {
+    "restaurant_id": 20,
+    "status": "1",
+    "title": "一品禾台湾菜",
+    "delivery_delay": "1440",
+    "delivery_price": "0.1",
+    "provide_max": 6,
+    "dishes": [
+      {
+        "cart_id": 724,
+        "dish_id": 573,
+        "title": "三杯杏鲍菇",
+        "price": 0.01,
+        "stock": 95,
+        "quantity": 2,
+        "image": "http://u1.wecook.cn/images/20150427/553de92c92d92.jpg-r30",
+        "image_big": "http://u1.wecook.cn/images/20150427/553de92c92d92.jpg-r64",
+        "price_normal": 48,
+        "status": "1"
+      }
+    ]
+  },
+  {
+    "restaurant_id": 20,
+    "status": "0",
+    "title": "一品禾台湾菜",
+    "delivery_delay": "1440",
+    "delivery_price": "0.1",
+    "provide_max": 6,
+    "dishes": [
+      {
+        "cart_id": 724,
+        "dish_id": 573,
+        "title": "三杯杏鲍菇",
+        "price": 0.01,
+        "stock": 95,
+        "quantity": 2,
+        "image": "http://u1.wecook.cn/images/20150427/553de92c92d92.jpg-r30",
+        "image_big": "http://u1.wecook.cn/images/20150427/553de92c92d92.jpg-r64",
+        "price_normal": 48,
+        "status": "-2"
+      }
+    ]
+  }
+]

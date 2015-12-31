@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/uikit_grey_light">
+
+    <ImageView
+        android:id="@+id/app_launch_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/app_splash"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/app_launch_channel_image"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/uikit_default_margin"
+        android:scaleType="fitCenter"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/app_launch_ad_bt_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="@dimen/uikit_default_margin"
+        android:layout_marginRight="@dimen/uikit_default_margin"
+        android:background="@drawable/app_splash_ad_skip"
+        android:scaleType="fitCenter"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/app_launch_guide_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wecook.uikit.widget.NoScrollViewPager
+            android:id="@+id/app_launch_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.wecook.uikit.widget.indicator.CirclePageIndicator
+            android:id="@+id/app_launch_guide_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="25dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="7dp"
+            android:paddingTop="2dp"
+            android:visibility="gone"
+            app:fillColor="@color/uikit_orange_pressed"
+            app:pageColor="#dfff"
+            app:radius="4.5dp"
+            app:strokeColor="@color/uikit_orange_pressed"
+            app:strokeWidth="0dp"/>
+        <!--<com.wecook.uikit.widget.indicator.CirclePageIndicator xmlns:vpi="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/app_launch_guide_indicator"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:layout_marginBottom="@dimen/uikit_default_margin"-->
+        <!--android:padding="1dp"-->
+        <!--vpi:fillColor="@color/uikit_orange"-->
+        <!--vpi:strokeColor="@color/uikit_orange" />-->
+    </FrameLayout>
+
+</FrameLayout>

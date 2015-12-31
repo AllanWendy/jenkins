@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/app_dish_detail_name"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="木须肉" />
+
+
+
+        <TextView
+            android:id="@+id/app_dish_detail_desc"
+            style="@style/UIKit.Font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_dish_detail_name"
+            android:maxLines="2"
+            android:paddingTop="8dp"
+            android:singleLine="false"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/app_dish_detail_price"
+            style="@style/UIKit.Font.Orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_dish_detail_desc"
+            android:paddingTop="4dp"
+            android:text="9.99" />
+
+        <TextView
+            android:id="@+id/app_dish_detail_price_normal"
+            style="@style/UIKit.Font.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/app_dish_detail_price"
+            android:layout_below="@id/app_dish_detail_name"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/app_dish_detail_price"
+            android:gravity="bottom"
+            android:paddingTop="8dp"
+            android:text="9.99" />
+
+        <TextView
+            android:id="@+id/app_dish_detail_evaluate"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_dish_detail_price"
+            android:layout_alignParentRight="true"
+            android:paddingTop="10dp"
+            android:text="评价 －－" />
+
+        <TextView
+            android:id="@+id/app_dish_detail_sale"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/app_dish_detail_price"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/app_dish_detail_evaluate"
+            android:paddingTop="10dp"
+            android:text="月售－－" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/app_dish_detail_properties_div_line"
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <LinearLayout
+        android:id="@+id/app_dish_detail_properties"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/UIKit.Font.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="难度：" />
+
+            <RatingBar
+                android:id="@+id/app_dish_detail_difficulty_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:max="3"
+                android:maxHeight="14dp"
+                android:minHeight="14dp"
+                android:numStars="3"
+                android:progressDrawable="@drawable/app_star_bar"
+                android:rating="3"
+                android:stepSize="1" />
+        </LinearLayout>
+
+        <View style="@style/UIKit.Line.Vertical" />
+
+        <TextView
+            android:id="@+id/app_dish_detail_cook_time"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="时间：－－" />
+
+        <View style="@style/UIKit.Line.Vertical" />
+
+        <TextView
+            android:id="@+id/app_dish_detail_flavour"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:text="口味：－－" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/uikit_grey" />
+
+    <RelativeLayout
+        android:id="@+id/app_dish_detail_preferential_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/app_dish_detail_preferential_label"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="优惠：" />
+
+        <LinearLayout
+            android:id="@+id/app_dish_detail_preferential_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/app_dish_detail_preferential_label"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/app_dish_detail_preferential_div_line"
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/app_dish_detail_delivery_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/app_dish_detail_delivery_label"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配送：" />
+
+        <LinearLayout
+            android:id="@+id/app_dish_detail_delivery_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/app_dish_detail_delivery_label"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/app_dish_detail_delivery_div_line"
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/app_dish_detail_security_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/app_dish_detail_security_label"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保障：" />
+
+        <LinearLayout
+            android:id="@+id/app_dish_detail_security_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/app_dish_detail_security_label"
+            android:orientation="vertical" />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/app_dish_detail_space"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/uikit_grey" />
+
+    <LinearLayout
+        android:id="@+id/app_dish_detail_scroll2comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+
+            android:id="@+id/app_dish_detail_scroll2Comment_text"
+            style="@style/UIKit.Font.Dark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="查看全部评价" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/app_ic_goto" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/app_dish_detail_scroll2Comment_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/uikit_grey" />
+
+</LinearLayout>

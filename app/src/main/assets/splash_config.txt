@@ -1,0 +1,1 @@
+{"sf":"1","channel":"$CHANNEL","logo":"http://u1.wecook.cn/channel/$CHANNEL.png","version":"$VERSION","stime":"$START","etime":"$END"}

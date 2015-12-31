@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/uikit_view_title_bar" />
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/app_shape_preferential_edit_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:padding="@dimen/uikit_default_padding"
+            android:src="@drawable/app_ic_preferential_img" />
+
+        <View
+            style="@style/UIKit.Line.Vertical"
+            android:layout_marginBottom="@dimen/uikit_default_margin"
+            android:layout_marginTop="@dimen/uikit_default_margin" />
+
+            <EditText
+                android:id="@+id/app_preferential_content_edit"
+                style="@style/UIKit.Font.Dark"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入优惠码"
+                android:paddingLeft="10dp"
+                android:singleLine="true" />
+
+
+
+            <ImageView
+                android:id="@+id/app_preferential_edit_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:padding="@dimen/uikit_default_padding"
+                android:src="@drawable/uikit_ic_clear"
+                android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/app_preferential_bt"
+        style="@style/UIKit.Font.Big.White"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/app_bt_bg_orange_white_radiu_2"
+        android:duplicateParentState="true"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/uikit_bt_white_orange_font" />
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+监听状态流
++-onPreProcessRequest
+|   +-onStart
+|   |   +-onCancel
+|   |   |   +-onSuccess
+|   |   |   +-onFailure
+|   |   +-makeRequest
+|   |   |   +-onPreProcessResponse
+|   |   |   |   +-onProcess
+|   |   |   |   +-onSuccess
+|   |   |   |   +-onFailure
+|   |   |   +-onPostProcessResponse
+|   |   +-onRetry
+|   +-onFinish
++-onPostProcessRequest
+
+基本结构
++-AsyncHttpClient
+    +-RequestHandler
+    +-AsyncHttpRequest
+    +-AsyncHttpResponseHandler

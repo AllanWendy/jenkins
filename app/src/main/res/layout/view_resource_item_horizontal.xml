@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/app_kitchen_item_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.wecook.uikit.widget.shape.HaloCircleImageView
+            android:id="@+id/app_kitchen_item_image"
+            style="@style/AppTheme.CircleImageView" />
+
+        <TextView
+            android:id="@+id/app_kitchen_item_name"
+            style="@style/UIKit.Font.Small.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/uikit_default_side_padding"
+            android:paddingRight="@dimen/uikit_default_side_padding"
+            android:paddingTop="@dimen/uikit_default_font_padding"
+            android:paddingBottom="@dimen/uikit_default_font_padding"
+            android:maxWidth="@dimen/app_kitchen_item_max_width"
+            android:background="@drawable/uikit_shape_rect_corners_dark_alpha"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/app_kitchen_item_div"
+        style="@style/UIKit.Font.Small.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/app_kitchen_horizontal_div"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/app_kitchen_item_group" />
+</RelativeLayout>

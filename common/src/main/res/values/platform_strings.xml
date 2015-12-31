@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="share_status_cancel">分享被取消</string>
+    <string name="share_status_success">分享成功</string>
+    <string name="share_status_fail">分享失败</string>
+    <string name="share_status_login_success">登录成功</string>
+    <string name="share_status_auth_success">授权成功</string>
+    <string name="share_status_cancel_download_weibo">取消下载微博</string>
+    <string name="share_errcode_unknown">分享出现未知错误</string>
+    <string name="share_status_auth_deny">授权失败</string>
+    <string name="share_status_cancel_auth">授权过程被取消</string>
+    <string name="share_errcode_uninstalled">未安装%1$s软件</string>
+    <string name="share_errcode_unsupport">%1$s不支持</string>
+    <string name="share_errcode_auth_cancel">授权过程被取消</string>
+    <string name="share_errcode_auth_fail_code">获得CODE失败</string>
+    <string name="share_errcode_login_fail">登录失败</string>
+    <string name="share_errcode_login_cancel">登录过程取消</string>
+    <string name="share_errcode_net_timeout">网络连接超时</string>
+    <string name="share_errcode_need_update">您安装的%1$s需要进行升级</string>
+    <string name="share_errcode_sdcard_badly">当前存储卡状态出错，不能进行含有图片的分享</string>
+    <string name="share_errcode_sdcard_no_space">当前存储卡空间不足，不能进行含有图片的分享</string>
+
+    <string name="share_text_empty">文本内容为空</string>
+    <string name="share_music_invalidate_url">音频试听链接为空</string>
+    <string name="share_video_invalidate_url">视频播放链接为空</string>
+    <string name="share_image_empty">图片数据为空</string>
+    <string name="share_webpage_invalidate_url">网址为空或者无效</string>
+    <string name="share_invalidate_datas">分享数据无效</string>
+    <string name="share_text_too_long">文本长度太长</string>
+    <string name="share_music_invalidate_redirect_url">跳转详情url为空或者无效</string>
+    <string name="share_music_invalidate_duration">播放时长为0或者无效</string>
+    <string name="share_music_title_empty">歌曲名或者描述为空</string>
+    <string name="share_video_title_empty">视频名或者描述为空</string>
+    <string name="share_video_invalidate_duration">视频时长无效</string>
+    <string name="share_video_invalidate_redirect_url">视频跳转url无效</string>
+    <string name="share_image_title_empty">图片标题为空</string>
+    <string name="share_image_desc_empty">图片描述为空</string>
+    <string name="share_image_invalid_detail_url">图片跳转url无效</string>
+    <string name="share_text_title_empty">文本标题为空</string>
+    <string name="share_invalidate_redirect_url">无效跳转url</string>
+    <string name="share_image_only_for_local">只支持本地图片</string>
+    <string name="share_image_invalid_url">无效的网络图片链接</string>
+
+    <string name="share_frequency_tip">您请求的频率过快！</string>
+    <string name="share_not_register_tip">该账号未注册微博！</string>
+    <string name="share_real_name_tip">该账号未实名认证！</string>
+    <string name="share_error_ret_tip">抱歉，分享失败，请稍后重试！</string>
+   
+
+</resources>

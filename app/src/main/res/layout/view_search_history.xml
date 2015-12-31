@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/uikit_default_padding"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/app_search_hot_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/uikit_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/uikit_default_padding_big"
+                android:paddingRight="@dimen/uikit_default_padding">
+
+                <TextView
+                    style="@style/UIKit.Font.Dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@drawable/app_ic_search_hot"
+                    android:drawablePadding="@dimen/uikit_default_drawable_padding"
+                    android:gravity="center_vertical"
+                    android:text="@string/app_label_hot_search" />
+            </LinearLayout>
+
+            <View style="@style/UIKit.Line.Horizontal" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/uikit_default_side_padding"
+                    android:paddingRight="@dimen/uikit_default_side_padding"
+                    android:paddingTop="@dimen/uikit_default_side_padding">
+
+                    <TextView
+                        android:id="@+id/app_search_hot_1"
+                        style="@style/UIKit.Font"
+                        android:layout_width="@dimen/app_search_tag_width"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/uikit_default_padding" />
+
+                    <View
+                        style="@style/UIKit.Line.Vertical"
+                        android:layout_marginBottom="@dimen/uikit_default_side_margin" />
+
+                    <TextView
+                        android:id="@+id/app_search_hot_2"
+                        style="@style/UIKit.Font"
+                        android:layout_width="@dimen/app_search_tag_width"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/uikit_default_padding" />
+
+                    <View
+                        style="@style/UIKit.Line.Vertical"
+                        android:layout_marginBottom="@dimen/uikit_default_side_margin" />
+
+                    <TextView
+                        android:id="@+id/app_search_hot_3"
+                        style="@style/UIKit.Font"
+                        android:layout_width="@dimen/app_search_tag_width"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/uikit_default_padding" />
+
+                    <View
+                        style="@style/UIKit.Line.Vertical"
+                        android:layout_marginBottom="@dimen/uikit_default_side_margin" />
+
+                    <TextView
+                        android:id="@+id/app_search_hot_4"
+                        style="@style/UIKit.Font"
+                        android:layout_width="@dimen/app_search_tag_width"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/uikit_default_padding" />
+
+                </LinearLayout>
+
+                <View style="@style/UIKit.Line.Horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/uikit_default_side_padding"
+                    android:paddingLeft="@dimen/uikit_default_side_padding"
+                    android:paddingRight="@dimen/uikit_default_side_padding">
+
+                    <TextView
+                        android:id="@+id/app_search_hot_5"
+                        style="@style/UIKit.Font"
+                        android:layout_width="@dimen/app_search_tag_width"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/uikit_default_padding" />
+
+                    <View
+                        style="@style/UIKit.Line.Vertical"
+                        android:layout_marginTop="@dimen/uikit_default_side_margin" />
+
+                    <TextView
+                        android:id="@+id/app_search_hot_6"
+                        style="@style/UIKit.Font"
+                        android:layout_width="@dimen/app_search_tag_width"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/uikit_default_padding" />
+
+                    <View
+                        style="@style/UIKit.Line.Vertical"
+                        android:layout_marginTop="@dimen/uikit_default_side_margin" />
+
+                    <TextView
+                        android:id="@+id/app_search_hot_7"
+                        style="@style/UIKit.Font"
+                        android:layout_width="@dimen/app_search_tag_width"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/uikit_default_padding" />
+
+                    <View
+                        style="@style/UIKit.Line.Vertical"
+                        android:layout_marginTop="@dimen/uikit_default_side_margin" />
+
+                    <TextView
+                        android:id="@+id/app_search_hot_8"
+                        style="@style/UIKit.Font"
+                        android:layout_width="@dimen/app_search_tag_width"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="@dimen/uikit_default_padding" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/UIKit.Line.Horizontal" />
+
+        <LinearLayout
+            android:id="@+id/app_search_history_item_group_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uikit_default_padding"
+            android:background="@color/uikit_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/uikit_default_padding_big"
+            android:paddingRight="@dimen/uikit_default_padding_mid">
+
+            <TextView
+                style="@style/UIKit.Font.Dark"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/app_ic_search_item"
+                android:drawablePadding="@dimen/uikit_default_drawable_padding"
+                android:gravity="center_vertical|left"
+                android:text="@string/app_label_history_search" />
+
+            <TextView
+                android:id="@+id/app_search_history_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:padding="@dimen/uikit_default_padding"
+                android:text="@string/app_label_history_search_clear"
+                android:textColor="@color/uikit_777"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View style="@style/UIKit.Line.Horizontal" />
+
+        <LinearLayout
+            android:id="@+id/app_search_history_item_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/uikit_shape_rect_side_small_corners_grey"
+            android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>

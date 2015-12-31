@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type='text/css'>
+html { font-family:Helvetica; color:#222; }
+h1 { color:steelblue; font-size:24px; margin-top:24px; }
+button { margin:0 3px 10px; font-size:12px; }
+.logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
+</style>
+</head>
+
+<body>
+<h1>WecookJSBridge Demo</h1>
+<div id='buttons'></div>
+<div id='log'></div>
+
+<script>
+window.onerror = function(err) {
+	log('window.onerror: ' + err);
+}
+
+function connectWecookJSBridge(callback) {
+	if (window.WecookJSBridge) {
+		callback(WecookJSBridge);
+	} else {
+		document.addEventListener('WecookJSBridgeReady', function() {
+			callback(WecookJSBridge);
+		}, false)
+	}
+}
+
+connectWecookJSBridge(function(bridge) {
+	var uniqueId = 1
+
+	/* 日志记录 */
+	function log(message, data) {
+		var log = document.getElementById('log');
+		var el = document.createElement('div');
+		el.className = 'logLine';
+		el.innerHTML = uniqueId++ + '. ' + message + ':<br/>' + (data ? JSON.stringify(data) : '');
+		if (log.children.length) { log.insertBefore(el, log.children[0]); }
+		else { log.appendChild(el); }
+	}
+
+	/* 初始化接口 */
+	bridge.init(function(message, responseCallback) {
+		log('JS got a message', message);
+		var data = { 'Javascript Responds':'Wee!' };
+		log('JS responding with', data);
+		responseCallback(data);
+	})
+
+	/* 事件调用测试 */
+	bridge.on('testJavascriptHandler', function(data, responseCallback) {
+		log('Native called testJavascriptHandler with', data);
+		var responseData = { 'Javascript Says':'Right back atcha!' };
+		log('JS responding with', responseData);
+		responseCallback(responseData);
+	})
+
+	/* Wecook 应用测试接口 */
+
+	/* 获取应用信息 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '获取应用信息';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 调用 "getAppInfo"接口');
+		bridge.invoke('getAppInfo', {}, function(response) {
+			log('JS 获取到应用信息 ->', response);
+		});
+	}
+
+	/* 获取用户信息 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '获取用户信息';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 调用 "getUserInfo"接口');
+		bridge.invoke('getUserInfo', {}, function(response) {
+			log('JS 获取到用户信息 ->', response);
+		});
+	}
+
+	/* 呼起支付组件 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '微信支付组件';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 调用 "getPayComponents"接口');
+		bridge.invoke('getPayComponents', {"id": "576"}, function(response) {
+			log('JS 获取到微信支付结果 ->', response);
+		});
+	}
+
+	/* 呼起支付组件 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '支付宝支付组件';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 调用 "getPayComponents"接口');
+		bridge.invoke('getPayComponents', {"id": "577"}, function(response) {
+			log('JS 获取到支付宝支付结果 ->', response);
+		});
+	}
+
+	/* 获取定位信息 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '获取定位信息';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 调用 "getLocation"接口');
+		bridge.invoke('getLocation', {}, function(response) {
+			log('JS 获取定位结果 ->', response);
+		});
+	}
+	
+	/* 分享组件: 微信朋友圈 */
+	bridge.on('menu:share:wxtimeline', function(argv){
+	    bridge.invoke('doShare',{
+			"appid":"",                                     // 兼容微信，额外参数，不用理会
+			"img_url": "http://u1.qiniudn.com/images/20141202/547d91a8d61b2.jpg",                                   		//分享时所带的图片路径
+			"img_width":	"120",                          //图片宽度
+			"img_height":	"120",                          //图片高度
+			"link":"http://m.wecook.cn",                    //分享附带链接地址
+			"desc":"西红柿炒鸡蛋是这样炼成的",                  //分享内容介绍
+			"title":"西红柿炒鸡蛋-wxtimeline",
+			"shareto":"wxtimeline"
+		}, function(res){
+			log('JS 调用menu:share:wxtimeline结果:', res);
+		});
+	 });
+
+	/* 分享组件: 微信好友 */
+	bridge.on('menu:share:wxfriends', function(argv){
+	    bridge.invoke('doShare',{
+			"appid":"",                                     // 兼容微信，额外参数，不用理会
+			"img_url": "http://u1.qiniudn.com/images/20141202/547d91a8d61b2.jpg",                                   		//分享时所带的图片路径
+			"img_width":	"120",                          //图片宽度
+			"img_height":	"120",                          //图片高度
+			"link":"http://m.wecook.cn",                    //分享附带链接地址
+			"desc":"西红柿炒鸡蛋是这样炼成的",                  //分享内容介绍
+			"title":"西红柿炒鸡蛋-wxfriends",
+			"shareto":"wxfriends"
+		}, function(res){
+			log('JS 调用menu:share:wxfriends结果:', res);
+		});
+	 });
+
+	/* 分享组件: 微博 */
+	bridge.on('menu:share:weibo', function(argv){
+	    bridge.invoke('doShare',{
+			"appid":"",                                     // 兼容微信，额外参数，不用理会
+			"img_url": "http://u1.wecook.cn/images/20141202/547d91a8d61b2.jpg",                                   		//分享时所带的图片路径
+			"img_width":	"120",                          //图片宽度
+			"img_height":	"120",                          //图片高度
+			"link":"http://m.wecook.cn",                    //分享附带链接地址
+			"desc":"西红柿炒鸡蛋是这样炼成的",                  //分享内容介绍
+			"title":"西红柿炒鸡蛋-weibo",
+			"shareto":"weibo"
+		}, function(res){
+			log('JS 调用menu:share:weibo结果:', res);
+		});
+	 });
+
+	/* 自定义跳转组件 */
+	bridge.on('menu:option', function(argv){
+	    bridge.invoke('updateOptions',[
+			{"title": "首页", "linkto": "main", "icon": "http://cai.wecook.cn/statics/images/gwc_icon_dian@2x.png"},
+			{"title": "搜索", "linkto": "search", "icon": "http://cai.wecook.cn/statics/images/mcbs_icon_search.png"}
+		], function(res){
+			log('JS 调用menu:custorm:links结果:', res);
+		});
+	 });
+
+	/* 点击选项跳转 */
+	bridge.on('doOptionMenu', function(data, responseCallback) {
+		log('Native called doOptionMenu with', data);
+		var responseData = { 'Javascript Says':'Jump!' };
+		log('JS responding with', responseData);
+		responseCallback(responseData);
+	});
+
+
+	/* 更新标题 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '更新标题';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 更新标题');
+		bridge.invoke('updateTitle',{"title": "我是买菜帮手"});
+	}
+
+	/* 页面布局控制:隐藏按钮 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '隐藏更多选项按钮';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 隐藏右上角三个点按钮');
+		bridge.call('hideOptionMenu');                //隐藏右上角三个点按钮。
+	}
+	
+	/* 页面布局控制:显示按钮 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '显示更多选项按钮';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 显示右上角三个点按钮');
+		bridge.call('showOptionMenu');                //显示右上角三个点按钮。
+	}
+
+	/* 显示关闭按钮 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '显示关闭按钮';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 显示关闭按钮');
+		bridge.call('showCloseMenu');
+	}
+
+	/* 隐藏关闭按钮 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '隐藏关闭按钮';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 隐藏关闭按钮');
+		bridge.call('hideCloseMenu');
+	}
+
+	/* 显示微信分享按钮 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '显示微信分享按钮';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('微信分享对话框');
+		bridge.invoke('showShareMenu', {"type":"weixin"}, function(response) {
+			log('JS 显示微信分享对话框 ->', response);
+		});
+	}
+
+	/* 显示所有分享按钮 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '显示所有分享按钮';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('所有分享对话框');
+		bridge.invoke('showShareMenu', {}, function(response) {
+			log('JS 显示所有分享对话框 ->', response);
+		});
+	}
+
+	/* 隐藏分享按钮 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '隐藏分享按钮';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 隐藏分享按钮');
+		bridge.call('hideShareMenu');
+	}
+
+	/* 显示购物车按钮 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '显示购物车按钮';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 显示购物车按钮');
+		bridge.call('showShopcartMenu');
+	}
+
+	/* 隐藏购物车按钮 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '隐藏购物车按钮';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('JS 隐藏购物车按钮');
+		bridge.call('hideShopcartMenu');
+	}
+
+	/* 发送安全请求 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '发送安全请求';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		log('发送安全请求');
+		bridge.call('showOptionMenu');
+	}
+
+	/* 直接显示微信分享对话框 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '直接显示微信分享对话框';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		bridge.invoke('shareDialog', {"type":"weixin"}, function(response) {
+			log('JS 直接显示微信分享对话框 ->', response);
+		});
+	}
+
+	/* 直接显示微信分享对话框 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '直接显示所有分享对话框';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		bridge.invoke('shareDialog', {}, function(response) {
+			log('JS 直接显示分享对话框 ->', response);
+		});
+	}
+
+	/* 检查版本进行更新 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = '检查版本';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		bridge.invoke('checkVersion');
+	}
+
+	/* schema跳转 */
+	document.body.appendChild(document.createElement('br'));
+	var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'));
+	callbackButton.innerHTML = 'schema跳转';
+	callbackButton.onclick = function(e) {
+		e.preventDefault();
+		location.href='wecook://dishes/restaurant/list'
+	}
+});
+</script>
+</body>
+</html>

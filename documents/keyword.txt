@@ -1,0 +1,10 @@
+
+release:
+=====================
+wecook
+wc58902639wc
+
+debug:
+=====================
+androiddebugkey
+android

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/uikit_default_padding"
+    android:paddingRight="@dimen/uikit_default_padding"
+    android:layout_gravity="center"
+    android:background="@color/uikit_grey">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uikit_default_padding"
+        android:paddingBottom="@dimen/uikit_default_padding">
+
+        <com.wecook.uikit.widget.CoveredImageView
+            android:id="@+id/app_login_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:src="@drawable/app_ic_close"
+            android:padding="@dimen/uikit_default_padding" />
+
+        <TextView
+            android:id="@+id/app_login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center"
+            android:gravity="center"
+            android:padding="@dimen/uikit_default_side_padding"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#ff000000"
+            android:text="@string/app_login_title" />
+
+        <TextView
+            style="@style/UIKit.Font.Big.Orange"
+            android:id="@+id/app_login_goto_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center"
+            android:padding="@dimen/uikit_default_side_padding"
+            android:text="@string/app_button_register" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/uikit_shape_rect_side_corners_grey">
+
+        <EditText
+            style="@style/UIKit.Font.Dark"
+            android:id="@+id/app_login_account_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_user_input_height"
+            android:background="@null"
+            android:paddingLeft="@dimen/uikit_default_padding"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/uikit_font_grep_light"
+            android:hint="@string/app_login_account_name_hint" />
+
+        <View
+            style="@style/UIKit.Line.Horizontal"
+            android:id="@+id/app_login_div"
+            android:layout_below="@id/app_login_account_name" />
+
+        <EditText
+            style="@style/UIKit.Font.Dark"
+            android:id="@+id/app_login_account_pwd"
+            android:layout_below="@id/app_login_div"
+            android:layout_width="match_parent"
+            android:background="@null"
+            android:paddingLeft="@dimen/uikit_default_padding"
+            android:layout_height="@dimen/app_user_input_height"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:textColorHint="@color/uikit_font_grep_light"
+            android:hint="@string/app_login_account_pwd_hint" />
+
+        <com.wecook.uikit.widget.CoveredImageView
+            android:id="@+id/app_login_forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/app_ic_forget_password"
+            android:layout_alignRight="@id/app_login_account_pwd"
+            android:layout_alignBottom="@id/app_login_account_pwd"
+            android:layout_alignTop="@id/app_login_account_pwd"
+            android:paddingRight="@dimen/uikit_default_padding"
+            android:paddingLeft="@dimen/uikit_default_padding" />
+
+        <com.wecook.uikit.widget.CoveredImageView
+            android:id="@+id/app_login_password_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/uikit_ic_clear"
+            android:layout_toLeftOf="@id/app_login_forget_pwd"
+            android:layout_alignBottom="@id/app_login_account_pwd"
+            android:layout_alignTop="@id/app_login_account_pwd"
+            android:paddingRight="@dimen/uikit_default_padding"
+            android:paddingLeft="@dimen/uikit_default_padding"
+            android:visibility="gone" />
+
+        <com.wecook.uikit.widget.CoveredImageView
+            android:id="@+id/app_login_account_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/uikit_ic_clear"
+            android:layout_alignRight="@id/app_login_account_name"
+            android:layout_alignBottom="@id/app_login_account_name"
+            android:layout_alignTop="@id/app_login_account_name"
+            android:paddingRight="@dimen/uikit_default_padding"
+            android:paddingLeft="@dimen/uikit_default_padding"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/app_login_button_group"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_user_button_height"
+        android:layout_marginTop="@dimen/app_login_button_margin"
+        android:layout_marginBottom="@dimen/app_login_button_margin"
+        android:background="@drawable/app_bt_side_orange_white"
+        android:gravity="center">
+
+        <TextView
+            style="@style/UIKit.Font.Big"
+            android:id="@+id/app_login_button_do"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:duplicateParentState="true"
+            android:paddingRight="@dimen/uikit_default_padding"
+            android:textColor="@color/uikit_bt_orange_white_font" />
+
+        <com.wecook.uikit.widget.progressbar.CircularProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/app_login_waiting"
+            android:layout_width="@dimen/app_loading_width"
+            android:layout_height="@dimen/app_loading_width"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            app:cpb_color="@color/uikit_orange"
+            app:cpb_stroke_width="2dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uikit_default_padding"
+        android:paddingLeft="@dimen/uikit_default_padding_big"
+        android:paddingRight="@dimen/uikit_default_padding_big"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/app_login_weixin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@drawable/app_ic_wexin"
+            android:drawablePadding="@dimen/uikit_default_drawable_padding"
+            android:text="@string/app_login_third_wexin" />
+
+        <TextView
+
+            android:id="@+id/app_login_qq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@drawable/app_ic_qq"
+            android:drawablePadding="@dimen/uikit_default_drawable_padding"
+            android:text="@string/app_login_third_qq" />
+
+        <TextView
+            android:id="@+id/app_login_weibo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@drawable/app_ic_weibo"
+            android:drawablePadding="@dimen/uikit_default_drawable_padding"
+            android:text="@string/app_login_third_weibo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/app_account_other_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/UIKit.Font.Small"
+            android:id="@+id/app_login_turnto_rapidlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="@string/app_login_turnto_rapidlogin" />
+
+        <com.wecook.uikit.widget.CoveredImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center"
+            android:src="@drawable/app_ic_botton" />
+    </LinearLayout>
+
+
+</LinearLayout>

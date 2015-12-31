@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/uikit_shape_rect_corners_white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/app_dish_recently_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/app_dish_recently_title"
+                style="@style/UIKit.Font.Big.Dark"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="科尔信息牛排" />
+
+            <View
+                style="@style/UIKit.Line.Horizontal"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/app_dish_recently_restaurant_name"
+                style="@style/UIKit.Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="科尔心"
+                android:textColor="@color/uikit_777" />
+
+            <TextView
+                android:id="@+id/app_dish_recently_but_time"
+                style="@style/UIKit.Font.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="科尔心" />
+
+            <TextView
+                android:id="@+id/app_dish_recently_dishdetail"
+                style="@style/UIKit.Font.Orange"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:drawableRight="@drawable/app_bt_right_orange"
+                android:gravity="center"
+                android:text="查看做法" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/app_dish_recently_more_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/uikit_white"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/UIKit.Font.Big.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:drawableRight="@drawable/app_ic_goto"
+            android:gravity="center"
+            android:text="查看更多" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/uikit_grey" />
+    </LinearLayout>
+</LinearLayout>

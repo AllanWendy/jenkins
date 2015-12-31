@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/uikit_grey"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/uikit_action_bar_default_height"
+        android:background="@color/uikit_light_transparent_95">
+
+        <include layout="@layout/uikit_view_title_bar"/>
+
+        <LinearLayout
+            android:id="@+id/app_login_account_last_state_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/uikit_action_bar_default_height"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/UIKit.Font.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/app_login_last_state_label"
+                android:textColor="@color/uikit_777"/>
+
+            <TextView
+                android:id="@+id/app_login_account_last_state"
+                style="@style/UIKit.Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:textColor="@color/uikit_black"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/app_my_login_padding">
+
+        <RelativeLayout
+            android:id="@+id/app_login_account_rl_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/uikit_shape_rect_side_small_corners_grey">
+
+            <EditText
+                android:id="@+id/app_login_account_name"
+                style="@style/UIKit.Font.Dark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_user_input_height"
+                android:background="@null"
+                android:drawableLeft="@drawable/app_icon_longin_user"
+                android:hint="@string/app_login_account_name_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="@dimen/uikit_default_big_margin"
+                android:textColorHint="@color/uikit_font_grep_light"/>
+
+            <View
+                android:id="@+id/app_login_div"
+                style="@style/UIKit.Line.Horizontal"
+                android:layout_below="@id/app_login_account_name"
+                android:layout_marginLeft="@dimen/uikit_default_big_margin"/>
+
+            <EditText
+                android:id="@+id/app_login_account_pwd"
+                style="@style/UIKit.Font.Dark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/app_user_input_height"
+                android:layout_below="@id/app_login_div"
+                android:background="@null"
+                android:drawableLeft="@drawable/app_icon_longin_pswd"
+                android:hint="@string/app_login_account_pwd_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/uikit_default_big_margin"
+                android:textColorHint="@color/uikit_font_grep_light"/>
+
+            <com.wecook.uikit.widget.CoveredImageView
+                android:id="@+id/app_login_forget_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/app_login_account_pwd"
+                android:layout_alignRight="@id/app_login_account_pwd"
+                android:layout_alignTop="@id/app_login_account_pwd"
+                android:layout_marginRight="3dp"
+                android:paddingLeft="@dimen/uikit_default_padding"
+                android:paddingRight="@dimen/uikit_default_padding"
+                android:scaleType="centerInside"
+                android:src="@drawable/app_ic_forget_password"/>
+
+            <com.wecook.uikit.widget.CoveredImageView
+                android:id="@+id/app_login_password_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/app_login_account_pwd"
+                android:layout_alignTop="@id/app_login_account_pwd"
+                android:layout_toLeftOf="@id/app_login_forget_pwd"
+                android:paddingLeft="@dimen/uikit_default_padding"
+                android:paddingRight="@dimen/uikit_default_padding"
+                android:src="@drawable/uikit_ic_clear"
+                android:visibility="gone"/>
+
+            <com.wecook.uikit.widget.CoveredImageView
+                android:id="@+id/app_login_account_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/app_login_account_name"
+                android:layout_alignRight="@id/app_login_account_name"
+                android:layout_alignTop="@id/app_login_account_name"
+                android:paddingLeft="@dimen/uikit_default_padding"
+                android:paddingRight="@dimen/uikit_default_padding"
+                android:src="@drawable/uikit_ic_clear"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/app_login_button_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_user_button_height"
+            android:layout_below="@id/app_login_account_rl_input"
+            android:layout_marginBottom="@dimen/app_login_button_margin"
+            android:layout_marginTop="@dimen/app_login_button_margin"
+            android:background="@drawable/app_bt_bg_orange_white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/app_login_button_do"
+                style="@style/UIKit.Font.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/app_login_title"
+                android:textColor="@color/uikit_bt_white_orange_font"/>
+
+            <com.wecook.uikit.widget.progressbar.CircularProgressBar
+                android:id="@+id/app_login_waiting"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="@dimen/app_loading_width"
+                android:layout_height="@dimen/app_loading_width"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:cpb_color="@color/uikit_white"
+                app:cpb_stroke_width="2dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_login_button_group">
+
+            <TextView
+                android:id="@+id/app_login_goto_register"
+                style="@style/UIKit.Font.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/app_login_register"
+                android:textColor="@color/uikit_777"/>
+
+            <TextView
+                android:id="@+id/app_login_turnto_rapidlogin"
+                style="@style/UIKit.Font.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/app_login_phone_rapid"
+                android:textColor="@color/uikit_777"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/app_login_third_account_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingLeft="@dimen/uikit_default_padding_big"
+                android:paddingRight="@dimen/uikit_default_padding_big"
+                android:paddingTop="@dimen/uikit_default_padding"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/app_login_weixin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/uikit_default_drawable_padding"
+                    android:drawableTop="@drawable/app_ic_wexin"
+                    android:gravity="center"
+                    android:text="@string/app_login_third_wexin"/>
+
+                <TextView
+
+                    android:id="@+id/app_login_qq"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/uikit_default_drawable_padding"
+                    android:drawableTop="@drawable/app_ic_qq"
+                    android:gravity="center"
+                    android:text="@string/app_login_third_qq"/>
+
+                <TextView
+                    android:id="@+id/app_login_weibo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/uikit_default_drawable_padding"
+                    android:drawableTop="@drawable/app_ic_weibo"
+                    android:gravity="center"
+                    android:text="@string/app_login_third_weibo"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/app_account_other_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/app_login_turn_on_third_login"
+                    style="@style/UIKit.Font.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/app_login_turnto_rapidlogin"
+                    android:textSize="14sp"/>
+
+                <com.wecook.uikit.widget.CoveredImageView
+                    android:id="@+id/app_login_turn_on_third_login_arrows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/app_bt_login_arrows"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

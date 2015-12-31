@@ -1,0 +1,129 @@
+<resources>
+    <!--
+                            NAME_RULES
+                group _ name _ property _ [size]
+
+                property: font padding margin height width
+                size: large big normal small double treble
+    -->
+
+    <dimen name="app_search_bar_height">48dp</dimen>
+    <dimen name="app_bottom_bar_height">55dp</dimen>
+
+    <dimen name="app_guide_one_1_margin">50dp</dimen>
+    <dimen name="app_guide_one_3_margin">20dp</dimen>
+    <dimen name="app_guide_two_2_margin">20dp</dimen>
+    <dimen name="app_guide_two_ll_margin">10dp</dimen>
+    <dimen name="app_guide_two_ll_inner_margin">50dp</dimen>
+
+    <dimen name="app_food_footer_height">50dp</dimen>
+    <dimen name="app_my_login_height">160dp</dimen>
+    <dimen name="app_my_login_padding">20dp</dimen>
+    <dimen name="app_my_rapid_login_padding">20dp</dimen>
+    <dimen name="app_my_login_margin_top">85dp</dimen>
+    <dimen name="app_my_login_name_margin_top">15dp</dimen>
+    <dimen name="app_my_login_margin_left">10dp</dimen>
+    <dimen name="app_my_line_margin">25dp</dimen>
+    <dimen name="app_my_login_bg_height">120dp</dimen>
+    <dimen name="app_my_login_avatar_w_h">70dp</dimen>
+    <dimen name="app_my_feature_item_height">50dp</dimen>
+    <dimen name="app_my_feature_line_horizontal_margin">8dp</dimen>
+    <dimen name="app_my_feature_item_order_height">64dp</dimen>
+    <dimen name="app_my_feature_item_order_width">64dp</dimen>
+    <dimen name="app_my_feature_item_order_margin">4dp</dimen>
+    <dimen name="app_my_feature_item_order_text_margin">2dp</dimen>
+    <dimen name="app_my_feature_item_icon_width">25dp</dimen>
+    <dimen name="app_my_feature_item_icon_height">25dp</dimen>
+    <dimen name="app_my_feature_item_square_height">80dp</dimen>
+    <dimen name="app_my_feature_item_square_width">100dp</dimen>
+    <dimen name="app_my_feature_item_square_padding">10dp</dimen>
+    <dimen name="app_my_feature_item_square_icon_width">30dp</dimen>
+    <dimen name="app_my_feature_item_square_icon_height">30dp</dimen>
+    <dimen name="app_my_feature_item_square_text_margin">6dp</dimen>
+    <dimen name="app_setting_about_margin">50dp</dimen>
+    <dimen name="app_setting_about_button_width">130dp</dimen>
+    <dimen name="app_setting_about_button_height_big">40dp</dimen>
+    <dimen name="app_setting_about_button_height">30dp</dimen>
+    <dimen name="app_food_head_tag_padding">15dp</dimen>
+    <dimen name="app_food_head_tag_font_padding">6dp</dimen>
+    <dimen name="app_food_head_tab_font_padding">8dp</dimen>
+    <dimen name="app_food_list_side_padding">8dp</dimen>
+    <dimen name="app_food_list_side_padding_small">4dp</dimen>
+
+    <dimen name="app_user_avatar_width">20dp</dimen>
+    <dimen name="app_user_avatar_height">20dp</dimen>
+    <dimen name="app_user_avatar_big_width">36dp</dimen>
+    <dimen name="app_user_avatar_big_height">36dp</dimen>
+    <dimen name="app_food_favorite_icon_width">80dp</dimen>
+    <dimen name="app_food_favorite_icon_height">80dp</dimen>
+    <dimen name="app_listview_item_side_padding">16dp</dimen>
+    <dimen name="app_listview_item_favorite_height">80dp</dimen>
+    <dimen name="app_about_bottom_padding">20dp</dimen>
+    <dimen name="app_comment_send_height">50dp</dimen>
+    <dimen name="app_category_menu_width">40dp</dimen>
+    <dimen name="app_category_menu_height">40dp</dimen>
+    <dimen name="app_category_item_space">10dp</dimen>
+    <dimen name="app_user_input_height">48dp</dimen>
+    <dimen name="app_user_button_height">48dp</dimen>
+    <dimen name="app_user_profile_item_height">48dp</dimen>
+    <dimen name="app_login_button_margin">20dp</dimen>
+    <dimen name="app_login_bottom_padding">30dp</dimen>
+    <dimen name="app_forget_pwd_top_offset">80dp</dimen>
+    <dimen name="app_register_tab_height">48dp</dimen>
+    <dimen name="app_register_side_margin">20dp</dimen>
+    <dimen name="app_register_bottom_margin">40dp</dimen>
+    <dimen name="app_loading_width">18dp</dimen>
+    <dimen name="app_loading_width_large">30dp</dimen>
+    <dimen name="app_user_profile_item_padding">36dp</dimen>
+    <dimen name="app_user_profile_avatar_height">90dp</dimen>
+    <dimen name="app_user_profile_avatar_width">90dp</dimen>
+    <dimen name="app_user_profile_gender_padding">18dp</dimen>
+    <dimen name="app_input_comment_height">85dp</dimen>
+    <dimen name="app_category_menu_list_width">80dp</dimen>
+    <dimen name="app_category_item_width">60dp</dimen>
+    <dimen name="app_search_tag_width">65dp</dimen>
+
+    <dimen name="app_share_dialog_padding">20dp</dimen>
+    <dimen name="app_kitchen_item_width">80dp</dimen>
+    <dimen name="app_kitchen_item_max_width">60dp</dimen>
+    <dimen name="app_kitchen_item_height">80dp</dimen>
+    <dimen name="app_kitchen_item_in_stroke_width">1dp</dimen>
+    <dimen name="app_kitchen_item_out_stroke_width">1dp</dimen>
+    <dimen name="app_kitchen_item_mid_stroke_width">2dp</dimen>
+    <dimen name="app_kitchen_item_padding">20dp</dimen>
+    <dimen name="app_kitchen_item_tb_space">20dp</dimen>
+    <dimen name="app_kitchen_item_lr_space">15dp</dimen>
+    <dimen name="app_kitchen_search_item_width">33dp</dimen>
+    <dimen name="app_kitchen_search_item_height">33dp</dimen>
+
+    <dimen name="app_kitchen_add_menu_width">40dp</dimen>
+    <dimen name="app_kitchen_add_menu_height">40dp</dimen>
+    <dimen name="app_index_bar_width">20dp</dimen>
+    <dimen name="app_kitchen_detail_head_image_width">180dp</dimen>
+    <dimen name="app_kitchen_detail_head_image_height">180dp</dimen>
+    <dimen name="app_kitchen_detail_add_button_width">220dp</dimen>
+    <dimen name="app_kitchen_detail_add_button_height">44dp</dimen>
+    <dimen name="app_recommend_label_height">50dp</dimen>
+    <dimen name="app_recommend_cook_show_translation_x">29dp</dimen>
+    <dimen name="app_recommend_cook_show_translation_y">-29dp</dimen>
+    <dimen name="app_recommend_cook_show_score_bg_size">58dp</dimen>
+    <dimen name="app_pick_holder_height">45dp</dimen>
+    <dimen name="app_pick_grid_space">2dp</dimen>
+    <dimen name="app_cook_show_publish_image_size">70dp</dimen>
+    <dimen name="app_cook_show_publish_item_height">48dp</dimen>
+
+    <dimen name="app_cook_show_author_height">60dp</dimen>
+    <dimen name="app_cook_show_author_avatar_size">36dp</dimen>
+    <dimen name="app_cook_show_score_author_avatar_size">25dp</dimen>
+    <dimen name="app_cook_show_side_padding">12dp</dimen>
+    <dimen name="app_cook_show_score_author_side_padding">5dp</dimen>
+    <dimen name="app_cook_show_score_size">48dp</dimen>
+    <dimen name="app_cook_show_operator_size">32dp</dimen>
+    <dimen name="app_food_publish_item_height">48dp</dimen>
+    <dimen name="app_food_publish_dialog_action_height">40dp</dimen>
+    <dimen name="app_food_publish_title_height">54dp</dimen>
+    <dimen name="app_edit_food_review_width">90dp</dimen>
+    <dimen name="app_food_publish_group_height">160dp</dimen>
+    <dimen name="app_option_icon_width">20dp</dimen>
+    <dimen name="app_option_icon_height">20dp</dimen>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/app_my_feature_item_order_height"
+    android:layout_height="@dimen/app_my_feature_item_order_height"
+    android:background="@drawable/app_item_background">
+
+    <LinearLayout
+        android:id="@+id/app_my_feature_order_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/app_my_feature_order_icon"
+            android:layout_width="@dimen/app_my_feature_item_square_icon_width"
+            android:layout_height="@dimen/app_my_feature_item_square_icon_height"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/app_my_feature_order_name"
+            style="@style/UIKit.Font.Small.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_my_feature_item_order_text_margin"
+            android:text="Name" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/app_my_feature_order_mark"
+        style="@style/UIKit.Font.Small.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/uikit_shape_cycle_orange_no_stroke"
+        android:gravity="center"
+        android:maxWidth="24dp"
+        android:minHeight="14dp"
+        android:minWidth="14dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

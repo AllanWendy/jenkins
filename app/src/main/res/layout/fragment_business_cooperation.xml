@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/uikit_view_title_bar"/>
+
+    <ImageView
+        android:id="@+id/app_business_cooperation_img"
+        style="@style/UIKit.ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/uikit_font_grep"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/uikit_grey"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/UIKit.Font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="味库为提供送菜到家服务而兴奋不已"/>
+
+        <TextView
+            style="@style/UIKit.Font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.5dp"
+            android:gravity="center"
+            android:text="为此我们一直努力"/>
+
+        <TextView
+            style="@style/UIKit.Font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="移动互联网让在家吃饭不再吝啬"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/UIKit.Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.5dp"
+                android:text="欢迎合作: "
+                android:textColor="@color/uikit_orange"/>
+
+            <TextView
+                android:id="@+id/app_business_cooperation_email"
+                style="@style/UIKit.Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.5dp"
+                android:text="bd@wecook.cn"
+                android:textColor="@color/uikit_orange"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

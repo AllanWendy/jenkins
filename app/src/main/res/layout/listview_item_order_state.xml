@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/uikit_white"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/app_order_state_div"
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/uikit_grey"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/app_dish_order_state_upline"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/uikit_font_grep"/>
+
+            <ImageView
+                android:id="@+id/app_dish_order_state_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/app_ic_step"/>
+
+            <View
+                android:id="@+id/app_dish_order_state_downline"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/uikit_font_grep"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/app_dish_order_state_title"
+                        style="@style/UIKit.Font.Dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"/>
+
+                    <TextView
+                        android:id="@+id/app_dish_order_state_desc"
+                        style="@style/UIKit.Font.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:autoLink="phone"
+                        android:textColorLink="@color/uikit_orange"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/app_dish_order_state_time"
+                    style="@style/UIKit.Font.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="14dp"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/app_dish_order_state_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/uikit_grey"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/uikit_grey_light"
+              android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/kitchen_img_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f2fbc966">
+
+            <include layout="@layout/uikit_view_title_bar"/>
+
+            <TextView
+                style="@style/UIKit.Font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/uikit_action_bar_default_height"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/app_kitchen_tip"
+                android:textColor="@color/uikit_333"
+                android:textSize="14sp"/>
+
+            <FrameLayout
+                android:id="@+id/app_kitchen_garnish"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="100dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/app_pic_pan"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|top"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/UIKit.Font.Big.White"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="13"
+                        android:gravity="center"
+                        android:singleLine="false"
+                        android:text="@string/app_kitchen_garnish"
+                        android:textSize="17sp"/>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"/>
+                </LinearLayout>
+
+            </FrameLayout>
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/kitchen_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/app_ic_kichen_recipe"/>
+
+            <TextView
+                style="@style/UIKit.Font.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:gravity="center"
+                android:text="精品菜谱"
+                android:textColor="@color/uikit_333"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/UIKit.Line.Vertical"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="18dp"/>
+
+        <LinearLayout
+            android:id="@+id/kitchen_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/app_ic_kichen_showcooak"/>
+
+            <TextView
+                style="@style/UIKit.Font.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:gravity="center"
+                android:text="晒厨艺"
+                android:textColor="@color/uikit_333"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

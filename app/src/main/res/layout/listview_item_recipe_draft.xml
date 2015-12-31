@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    *****NAME_RULES*****   
+==============================================
+drawable:
+    {group _ type _ name _ [state] _ [suffix]}
+==============================================
+id:
+    {group _ ui _ type _ [local] _ name}
+==============================================
+layout:
+    {[group] _ ui _ name}
+==============================================
+menu:
+    {[group] _ ui _ name}
+==============================================
+anim:
+    {group _ name _ [local]}
+==============================================
+string:
+    {group _ [ui] _ name}
+==============================================
+dimen:
+    {group _ name _ property _ [size]}
+==============================================
+**********************************************
+group:
+    [common|uikit|sdk|app]
+
+ui:
+    [main|kitchen|home|activity|fragment|view|actionbar|...]
+
+type:
+    [bg(background)|ic(icon)|bt(button(必须有状态))|txt(textfield)
+    |list(listview)|menu(menuitem)|radio(radiobutton)|checkbox|...]
+
+local:
+    [top|head|bottom|left|right|in|out|rotate|...]
+
+property:
+    [font|padding|margin|height|width|...]
+
+size:
+    [large|big|normal|small|double|treble|...]
+
+state:
+    [normal|pressed|disabled|on|off|...]
+
+suffix:
+    [light|dark|...]
+==============================================
+**********************************************
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/app_listview_item_side_padding"
+                android:background="@color/uikit_white">
+
+    <ImageView
+        style="@style/UIKit.ImageView"
+        android:id="@+id/app_recipe_draft_image"
+        android:layout_width="@dimen/app_food_favorite_icon_width"
+        android:layout_height="@dimen/app_food_favorite_icon_height"
+        android:layout_marginTop="@dimen/uikit_default_padding"
+        android:layout_marginBottom="@dimen/uikit_default_padding"
+        android:layout_centerVertical="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/app_recipe_draft_name_group"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/app_recipe_draft_image"
+        android:layout_alignTop="@id/app_recipe_draft_image"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:paddingRight="@dimen/uikit_default_padding">
+
+        <TextView
+            style="@style/UIKit.Font.Big.Dark"
+            android:id="@+id/app_recipe_draft_name"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/UIKit.Font.Brown"
+            android:id="@+id/app_recipe_draft_sub_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/UIKit.Font.Brown"
+        android:id="@+id/app_recipe_draft_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:maxLines="2"
+        android:gravity="left|top"
+        android:layout_below="@id/app_recipe_draft_name_group"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:paddingRight="@dimen/uikit_default_padding"
+        android:layout_toRightOf="@id/app_recipe_draft_image"/>
+
+    <TextView
+        style="@style/UIKit.Font.Dark.Light"
+        android:id="@+id/app_recipe_draft_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingLeft="@dimen/uikit_default_padding"
+        android:paddingRight="@dimen/uikit_default_padding"
+        android:layout_alignBottom="@id/app_recipe_draft_image"
+        android:layout_toRightOf="@id/app_recipe_draft_image"/>
+
+    <View
+        style="@style/UIKit.Line.Horizontal"
+        android:layout_below="@id/app_recipe_draft_image"/>
+</RelativeLayout>

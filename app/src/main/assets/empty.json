@@ -1,0 +1,112 @@
+{
+  "status": 1,
+  "info": "success",
+  "result": {
+    "cards": [
+      {
+        "type": "banner",
+        "rows": [{}]
+      },
+      {
+        "type": "dishes",
+        "area_lt": {
+          "name": "买菜帮手",
+          "sub_name": "手机上的菜市场",
+          "color": "#ffff644e",
+          "url": "wecook://dishes/recommend"
+        },
+        "area_rt": {
+          "templateId": 2,
+          "list": [
+            {},
+            {}
+          ]
+        },
+        "rows": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "type": "recipe",
+        "area_lt": {
+          "name": "精品菜谱",
+          "sub_name": "天下没有难做的菜",
+          "color": "#ff6EC014",
+          "url": "wecook://recipe/index"
+        },
+        "area_rt": {
+          "templateId": 3,
+          "list": [
+            {},
+            {},
+            {},
+            {}
+          ]
+        },
+        "rows": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "type": "cooking",
+        "area_lt": {
+          "name": "晒厨艺",
+          "sub_name": "好厨艺还要藏着吗",
+          "color": "#ff4a90e2",
+          "url": "wecook://cooking/index"
+        },
+        "area_rt": {
+          "templateId": 4,
+          "list": [{}]
+        },
+        "rows": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "type": "topic",
+        "area_lt": {
+          "name": "吃货新鲜事",
+          "sub_name": "吃货新鲜事",
+          "color": "#ff6EC014",
+          "url": "wecook://topic/index"
+        },
+        "rows": [
+          {},
+          {},
+          {},
+          {}
+        ]
+      },
+      {
+        "type": "events",
+        "area_lt": {
+          "name": "吃货去哪儿",
+          "sub_name": "吃货去哪儿",
+          "color": "#ffff644e",
+          "url": "wecook://events/index"
+        },
+        "rows": [
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  }
+}

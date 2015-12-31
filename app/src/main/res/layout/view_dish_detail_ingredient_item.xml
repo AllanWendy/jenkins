@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/app_ingredient_name"
+        style="@style/UIKit.Font.Dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="主料名" />
+
+    <TextView
+        android:id="@+id/app_ingredient_quality"
+        style="@style/UIKit.Font.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="克重" />
+</LinearLayout>

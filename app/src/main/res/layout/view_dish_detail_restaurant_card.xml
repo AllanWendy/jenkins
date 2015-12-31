@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uikit_grey"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/app_dish_detail_restaurant_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/uikit_white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/app_dish_detail_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="15dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/app_dish_detail_name"
+                    style="@style/UIKit.Font.Dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="三两餐厅" />
+
+                <LinearLayout
+                    android:id="@+id/app_dish_detail_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/app_dish_detail_goto_restaurant"
+                style="@style/UIKit.Font"
+                android:layout_width="78dp"
+                android:layout_height="29dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/app_shape_rect_side"
+                android:gravity="center"
+                android:text="进入餐厅" />
+        </LinearLayout>
+
+        <View style="@style/UIKit.Line.Horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/uikit_white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/app_dish_detail_score"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="4.7\n评分" />
+
+            <View
+                style="@style/UIKit.Line.Vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/app_dish_detail_monthly_sales"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="213\n月售" />
+
+            <View
+                style="@style/UIKit.Line.Vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/app_dish_detail_in_sale_dishes"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="32\n在售菜品" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/app_dish_detail_recommend_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/app_dish_detail_recommend_1"
+            layout="@layout/listview_item_dish" />
+
+        <include
+            android:id="@+id/app_dish_detail_recommend_2"
+            layout="@layout/listview_item_dish" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/app_dish_detail_recommend_text"
+        style="@style/UIKit.Font.Small"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/uikit_grey"
+        android:gravity="center"
+        android:text="上拉查看更多菜品"></TextView>
+</LinearLayout>
