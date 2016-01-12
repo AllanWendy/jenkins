@@ -1,4 +1,4 @@
-df sd f#!/usr/bin/python
+adsf asd fdf sd f#!/usr/bin/python
 #coding=utf-8 #默认编码格式为utf-8
 
 import time
